@@ -20,4 +20,6 @@ add_executable(HW4
         Events/Pack.h
         Events/Balrog.h
         Events/Slime.h
-        Events/Snail.h)
+        Events/Snail.h
+        Events/PotionsMerchant.h
+        Events/SolarEclipse.h)

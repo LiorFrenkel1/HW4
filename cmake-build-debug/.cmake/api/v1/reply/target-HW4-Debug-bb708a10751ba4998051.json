@@ -133,7 +133,9 @@
 				8,
 				9,
 				10,
-				11
+				11,
+				12,
+				13
 			]
 		},
 		{
@@ -209,6 +211,16 @@
 		{
 			"backtrace" : 1,
 			"path" : "Events/Snail.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Events/PotionsMerchant.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Events/SolarEclipse.h",
 			"sourceGroupIndex" : 0
 		}
 	],
