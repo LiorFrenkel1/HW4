@@ -14,4 +14,10 @@ add_executable(HW4
         MatamStory.cpp
         MatamStory.h
         Utilities.cpp
-        Utilities.h)
+        Utilities.h
+        Events/Monster.h
+        Events/Pack.h
+        Events/Pack.h
+        Events/Balrog.h
+        Events/Slime.h
+        Events/Snail.h)

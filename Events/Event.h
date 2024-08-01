@@ -2,13 +2,12 @@
 #pragma once
 
 #include "../Players/Player.h"
+#include "../MatamStory.h"
 
 class Event {
 public:
-    /**
-     * Gets the description of the event
-     *
-     * @return - the description of the event
-    */
+
+    virtual void event(MatamStory) = 0;
+
     string getDescription() const;
 };
