@@ -9,8 +9,15 @@ private:
 public:
     /**
      * Constructor for pack
+     * @param first The first monster added to pack (the order doesn't matter)
      */
-    Pack();
+    Pack(Monster& first);
+
+    /**
+     * Adds a monster to pack
+     * @param monster
+     */
+    void addToPack(Monster& monster);
 
     /**
     * returns the combat power of a monster or a pack

@@ -6,8 +6,12 @@
 
 class Event {
 public:
+    /**
+     * Activates an event upon a player
+     * @param game
+     */
+    virtual void event(MatamStory& game) = 0;
 
-    virtual void event(MatamStory) = 0;
-
+    //TODO understand the demand of getDescription by the instructions
     string getDescription() const;
 };
