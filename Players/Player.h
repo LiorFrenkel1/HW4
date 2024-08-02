@@ -2,11 +2,23 @@
 #pragma once
 
 #include <string>
+#include "Character.h"
 
 using std::string;
 
 class Player {
+private:
+    string name; //english letters, no spaces, max 15 chars.
+    int level; // [1,10]
+    int force;
+    int currentHP; // <= maxHp
+    const int maxHP; // >0
+    int coins;
+    Character& character;
+
 public:
+
+    Player();
     /**
      * Gets the description of the player
      *
@@ -48,4 +60,21 @@ public:
      * @return - coins of the player
     */
     int getCoins() const;
+
+    /**
+     * fighting an abstract monster according to the values, if you win you get to loot
+     * otherwise, loose HP in amount of combatPower
+     * @param combatPower
+     * @param loot
+     */
+    virtual void encounter(int combatPower, int loot);
+
+    /**
+     * Use money for one potion and get the HP, not more than the max HP
+     */
+    void buyPotion();
+
+    void potionMerchantEvent();
+
+    virtual void solarEclipse();
 };
