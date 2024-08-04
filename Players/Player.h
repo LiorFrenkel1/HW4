@@ -9,7 +9,7 @@ using std::string;
 class Character;
 
 class Player {
-private:
+protected:
     string name; //english letters, no spaces, max 15 chars.
     int level; // [1,10]
     int force;
