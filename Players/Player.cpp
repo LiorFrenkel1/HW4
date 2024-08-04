@@ -2,7 +2,7 @@
 #include <stdexcept>
 //-----------------------------------C'tor--------------------------------------------------------
 Player::Player(string name, Character& characterToPlayer) : name(name), level(1), force(5),
-currentHP(100),maxHP(100), coins(10), character(characterToPlayer){
+currentHP(100),maxHP(100), coins(10), job() ,character(characterToPlayer){
 }
 
 //------------------------------------Getters------------------------------------------------------
@@ -26,6 +26,16 @@ int Player::getLevel() const {
     return this->level;
 }
 
+/**
+ * format: <Name>, <Job> with <Character> character (level <Level>, force <Force>)
+ * @return string of description
+ */
+string Player::getDescription() const {
+    string description;
+    description += name + ", " + job + " with " + character.getDescription() + " character ";
+    description += "(level " + std::to_string(level) + ", force " + std::to_string(force) + ")";
+    return description;
+}
 
 //------------------------------------Added functions----------------------------------------------
 
@@ -46,10 +56,13 @@ void Player::buyPotion() {
     const int potionPrice = 5;
     const int potionHP = 10;
     coins -= potionPrice;
-    currentHP = (currentHP + potionHP) % maxHP;
+    currentHP = currentHP + potionHP;
+    if (currentHP > maxHP) {
+        currentHP = maxHP;
+    }
 }
 
-bool Player::isFullHP() {
+bool Player::isFullHP() const {
         return currentHP == maxHP;
 }
 
@@ -58,5 +71,8 @@ void Player::potionMerchantEvent() {
 }
 
 void Player::solarEclipse() {
-    force--;
+    if (force > 0) {
+        force--;
+    }
 }
+

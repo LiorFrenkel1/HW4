@@ -6,6 +6,8 @@
 
 using std::string;
 
+class Character;
+
 class Player {
 private:
     string name; //english letters, no spaces, max 15 chars.
@@ -14,6 +16,7 @@ private:
     int currentHP; // <= maxHp
     int maxHP; // >0
     int coins;
+    string job;
     Character& character;
 
 public:
@@ -24,7 +27,7 @@ public:
      *
      * @return - description of the player
     */
-    virtual string getDescription() const = 0;
+    string getDescription() const;
 
     /**
      * Gets the name of the player
@@ -78,7 +81,7 @@ public:
      * Check current situation of HP
      * @return true if HP is full
      */
-    bool isFullHP();
+    bool isFullHP() const;
 
     /**
      * doing potionsMerchant event according to the character

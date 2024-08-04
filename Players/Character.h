@@ -5,6 +5,8 @@
 
 using std::string;
 
+class Player;
+
 class Character {
 
 public:
@@ -14,13 +16,13 @@ public:
     virtual string getDescription() = 0;
 };
 
-class Responsible : Character{
+class Responsible : public Character{
 public:
     void potionsMerchantEvent(Player& player) override;
     string getDescription() override;
 };
 
-class RiskTaker : Character{
+class RiskTaker : public Character{
 public:
     void potionsMerchantEvent(Player& player) override;
     string getDescription() override;
