@@ -49,8 +49,12 @@ void Player::buyPotion() {
     currentHP = (currentHP + potionHP) % maxHP;
 }
 
+bool Player::isFullHP() {
+        return currentHP == maxHP;
+}
+
 void Player::potionMerchantEvent() {
-    this->character.potionsMerchantEvent();
+    this->character.potionsMerchantEvent(*this);
 }
 
 void Player::solarEclipse() {

@@ -75,6 +75,12 @@ public:
     void buyPotion();
 
     /**
+     * Check current situation of HP
+     * @return true if HP is full
+     */
+    bool isFullHP();
+
+    /**
      * doing potionsMerchant event according to the character
      */
     void potionMerchantEvent();
