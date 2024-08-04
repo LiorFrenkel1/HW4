@@ -12,19 +12,19 @@ private:
     int level; // [1,10]
     int force;
     int currentHP; // <= maxHp
-    const int maxHP; // >0
+    int maxHP; // >0
     int coins;
     Character& character;
 
 public:
 
-    Player();
+    Player(string name, Character& characterToPlayer);
     /**
      * Gets the description of the player
      *
      * @return - description of the player
     */
-    string getDescription() const;
+    virtual string getDescription() const = 0;
 
     /**
      * Gets the name of the player
@@ -74,7 +74,13 @@ public:
      */
     void buyPotion();
 
+    /**
+     * doing potionsMerchant event according to the character
+     */
     void potionMerchantEvent();
 
+    /**
+     * doing solarEclipseEvent according to the job.
+     */
     virtual void solarEclipse();
 };
