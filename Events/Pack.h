@@ -1,11 +1,13 @@
 
 #pragma once
+
 #include <vector>
+#include <memory>
 #include <Monster.h>
 
 class Pack : public Monster {
 private:
-    std::vector<Monster*> monsters;
+    std::vector<std::shared_ptr<Monster>> monsters;
 public:
     /**
      * Constructor for pack, creates an empty pack
@@ -16,7 +18,7 @@ public:
      * Adds a monster to pack
      * @param monster
      */
-    void addToPack(Monster& monster);
+    void addToPack(std::shared_ptr<Monster>& monster);
 
     /**
     * returns the combat power of a monster or a pack

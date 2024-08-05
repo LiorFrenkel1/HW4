@@ -1,6 +1,4 @@
 
-#pragma once
-
 #include "Snail.h"
 
 Snail::Snail(int combatPower, int loot, int damage) :

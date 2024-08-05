@@ -112,6 +112,33 @@ build CMakeFiles/HW4.dir/Events/SolarEclipse.cpp.obj: CXX_COMPILER__HW4_unscanne
   TARGET_COMPILE_PDB = CMakeFiles\HW4.dir\
   TARGET_PDB = HW4.pdb
 
+build CMakeFiles/HW4.dir/Players/Character.cpp.obj: CXX_COMPILER__HW4_unscanned_Debug C$:/Users/liorf/OneDrive/Documents/GitHub/HW4/Players/Character.cpp || cmake_object_order_depends_target_HW4
+  DEP_FILE = CMakeFiles\HW4.dir\Players\Character.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/liorf/OneDrive/Documents/GitHub/HW4/. -IC:/Users/liorf/OneDrive/Documents/GitHub/HW4/Events -IC:/Users/liorf/OneDrive/Documents/GitHub/HW4/Players
+  OBJECT_DIR = CMakeFiles\HW4.dir
+  OBJECT_FILE_DIR = CMakeFiles\HW4.dir\Players
+  TARGET_COMPILE_PDB = CMakeFiles\HW4.dir\
+  TARGET_PDB = HW4.pdb
+
+build CMakeFiles/HW4.dir/Players/Job.cpp.obj: CXX_COMPILER__HW4_unscanned_Debug C$:/Users/liorf/OneDrive/Documents/GitHub/HW4/Players/Job.cpp || cmake_object_order_depends_target_HW4
+  DEP_FILE = CMakeFiles\HW4.dir\Players\Job.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/liorf/OneDrive/Documents/GitHub/HW4/. -IC:/Users/liorf/OneDrive/Documents/GitHub/HW4/Events -IC:/Users/liorf/OneDrive/Documents/GitHub/HW4/Players
+  OBJECT_DIR = CMakeFiles\HW4.dir
+  OBJECT_FILE_DIR = CMakeFiles\HW4.dir\Players
+  TARGET_COMPILE_PDB = CMakeFiles\HW4.dir\
+  TARGET_PDB = HW4.pdb
+
+build CMakeFiles/HW4.dir/Players/Player.cpp.obj: CXX_COMPILER__HW4_unscanned_Debug C$:/Users/liorf/OneDrive/Documents/GitHub/HW4/Players/Player.cpp || cmake_object_order_depends_target_HW4
+  DEP_FILE = CMakeFiles\HW4.dir\Players\Player.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/liorf/OneDrive/Documents/GitHub/HW4/. -IC:/Users/liorf/OneDrive/Documents/GitHub/HW4/Events -IC:/Users/liorf/OneDrive/Documents/GitHub/HW4/Players
+  OBJECT_DIR = CMakeFiles\HW4.dir
+  OBJECT_FILE_DIR = CMakeFiles\HW4.dir\Players
+  TARGET_COMPILE_PDB = CMakeFiles\HW4.dir\
+  TARGET_PDB = HW4.pdb
+
 build CMakeFiles/HW4.dir/main.cpp.obj: CXX_COMPILER__HW4_unscanned_Debug C$:/Users/liorf/OneDrive/Documents/GitHub/HW4/main.cpp || cmake_object_order_depends_target_HW4
   DEP_FILE = CMakeFiles\HW4.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
@@ -147,7 +174,7 @@ build CMakeFiles/HW4.dir/Utilities.cpp.obj: CXX_COMPILER__HW4_unscanned_Debug C$
 #############################################
 # Link the executable HW4.exe
 
-build HW4.exe: CXX_EXECUTABLE_LINKER__HW4_Debug CMakeFiles/HW4.dir/Events/Balrog.cpp.obj CMakeFiles/HW4.dir/Events/Monster.cpp.obj CMakeFiles/HW4.dir/Events/Pack.cpp.obj CMakeFiles/HW4.dir/Events/PotionsMerchant.cpp.obj CMakeFiles/HW4.dir/Events/Slime.cpp.obj CMakeFiles/HW4.dir/Events/Snail.cpp.obj CMakeFiles/HW4.dir/Events/SolarEclipse.cpp.obj CMakeFiles/HW4.dir/main.cpp.obj CMakeFiles/HW4.dir/MatamStory.cpp.obj CMakeFiles/HW4.dir/Utilities.cpp.obj
+build HW4.exe: CXX_EXECUTABLE_LINKER__HW4_Debug CMakeFiles/HW4.dir/Events/Balrog.cpp.obj CMakeFiles/HW4.dir/Events/Monster.cpp.obj CMakeFiles/HW4.dir/Events/Pack.cpp.obj CMakeFiles/HW4.dir/Events/PotionsMerchant.cpp.obj CMakeFiles/HW4.dir/Events/Slime.cpp.obj CMakeFiles/HW4.dir/Events/Snail.cpp.obj CMakeFiles/HW4.dir/Events/SolarEclipse.cpp.obj CMakeFiles/HW4.dir/Players/Character.cpp.obj CMakeFiles/HW4.dir/Players/Job.cpp.obj CMakeFiles/HW4.dir/Players/Player.cpp.obj CMakeFiles/HW4.dir/main.cpp.obj CMakeFiles/HW4.dir/MatamStory.cpp.obj CMakeFiles/HW4.dir/Utilities.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\HW4.dir

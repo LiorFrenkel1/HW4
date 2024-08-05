@@ -1,6 +1,4 @@
 
-#pragma once
-
 #include "Balrog.h"
 
 Balrog::Balrog(int combatPower, int loot, int damage) :

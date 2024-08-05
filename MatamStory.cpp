@@ -1,21 +1,28 @@
 
-#include "MatamStory.h"
+#include <iostream>
+#include <fstream>
 
+#include "MatamStory.h"
+#include <stdexcept>
 #include "Utilities.h"
 
-MatamStory::MatamStory(std::istream& eventsStream, std::istream& playersStream) {
+MatamStory::MatamStory(std::ifstream& eventsStream, std::ifstream& playersStream) :
+events(std::vector<std::shared_ptr<Event>>()),
+players(std::vector<std::shared_ptr<Player>>()) {
+    //Read events
+    string eventName;
+    if (!eventsStream.is_open())
+    while (!eventsStream) {
+        eventName = "";
+        eventsStream >> eventName;
+        if
+        if (eventName == "balrog") {
 
-    /*===== TODO: Open and read events file =====*/
+        } else {
+            throw std::
+        }
+    }
 
-    /*==========================================*/
-
-
-    /*===== TODO: Open and Read players file =====*/
-
-    /*============================================*/
-
-
-    this->m_turnIndex = 1;
 }
 
 void MatamStory::playTurn(Player& player) {
@@ -27,8 +34,6 @@ void MatamStory::playTurn(Player& player) {
      * 3. Play the event
      * 4. Print the turn outcome with "printTurnOutcome"
     */
-
-    m_turnIndex++;
 }
 
 void MatamStory::playRound() {

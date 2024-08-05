@@ -2,16 +2,18 @@
 #pragma once
 
 #include <iostream>
+#include <fstream>
 
 #include "Players/Player.h"
 #include "Events/Event.h"
 #include <vector>
+#include <memory>
 
 
 class MatamStory{
 private:
-    std::vector<Event*> events;
-    std::vector<Player*> players;
+    std::vector<std::shared_ptr<Event>> events;
+    std::vector<std::shared_ptr<Player>> players;
     /**
      * Playes a single turn for a player
      *
@@ -36,6 +38,8 @@ private:
     bool isGameOver() const;
 
 public:
+    std::shared_ptr<Event> currentEvent;
+    std::shared_ptr<Player> currentPlayer;
     /**
      * Constructor of MatamStory class
      *

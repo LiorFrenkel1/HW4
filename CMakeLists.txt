@@ -23,6 +23,11 @@ add_executable(HW4
         Events/Snail.h
         Events/SolarEclipse.cpp
         Events/SolarEclipse.h
+        Players/Character.cpp
+        Players/Character.h
+        Players/Job.cpp
+        Players/Job.h
+        Players/Player.cpp
         Players/Player.h
         main.cpp
         MatamStory.cpp

@@ -1,5 +1,6 @@
-//
-// Created by liorf on 01/08/2024.
-//
 
 #include "PotionsMerchant.h"
+
+void PotionsMerchant::event(MatamStory& game) {
+    game.currentPlayer->potionMerchantEvent();
+}

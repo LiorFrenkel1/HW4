@@ -1,6 +1,4 @@
 
-#pragma once
-
 #include "Slime.h"
 
 Slime::Slime(int combatPower, int loot, int damage) :
