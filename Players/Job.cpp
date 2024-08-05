@@ -21,8 +21,8 @@ MagicalCharacter(name, characterToPlayer){
 CloseFighter::CloseFighter(std::string name, Character &characterToPlayer) :
 Player(name, characterToPlayer){}
 
-void CloseFighter::encounter(int combatPower, int loot) {
-    Player::encounter(combatPower, loot);
+void CloseFighter::encounter(int combatPower, int loot, int damage) {
+    Player::encounter(combatPower, loot, damage);
     int playerCombatPower = force + level;
     if(playerCombatPower > combatPower) {
         currentHP -= 10;

@@ -70,7 +70,7 @@ public:
      * @param combatPower
      * @param loot
      */
-    virtual void encounter(int combatPower, int loot);
+    virtual void encounter(int combatPower, int loot, int damage);
 
     /**
      * Use money for one potion and get the HP, not more than the max HP
