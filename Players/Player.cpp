@@ -39,13 +39,13 @@ string Player::getDescription() const {
 
 //------------------------------------Added functions----------------------------------------------
 
-void Player::encounter(int combatPower, int loot) {
+void Player::encounter(int combatPower, int loot, int damage) {
     int playerCombatPower = this->level + this->force;
     if (playerCombatPower > combatPower) {
         level++;
         coins += loot;
     } else {
-        currentHP -= combatPower;
+        currentHP -= damage;
         if (currentHP < 0) {
             currentHP = 0;
         }
