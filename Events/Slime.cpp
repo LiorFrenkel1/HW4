@@ -1,5 +1,19 @@
-//
-// Created by liorf on 01/08/2024.
-//
+
+#pragma once
 
 #include "Slime.h"
+
+Slime::Slime(int combatPower, int loot, int damage) :
+        combatPower(combatPower), loot(loot), damage(damage){}
+
+int Slime::calculateCombatPower() const {
+    return this->combatPower;
+}
+
+int Slime::calculateLoot() const {
+    return this->loot;
+}
+
+int Slime::calculateDamage() const {
+    return this->damage;
+};

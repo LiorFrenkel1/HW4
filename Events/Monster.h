@@ -13,15 +13,16 @@ public:
     /**
      * returns the combat power of a monster or a pack
      */
-    virtual unsigned int calculateCombatPower() = 0;
+    virtual int calculateCombatPower() const = 0;
     /**
     * returns the loot of a monster or a pack
     */
-    virtual unsigned int calculateLoot() = 0;
+    virtual int calculateLoot() const = 0;
     /**
     * returns the damage of a monster or a pack
     */
-    virtual unsigned int calculateDamage() = 0;
+    virtual int calculateDamage() const = 0;
 
+    virtual ~Monster();
 };
 

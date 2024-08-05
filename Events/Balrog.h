@@ -4,24 +4,23 @@
 
 class Balrog : public Monster {
 private:
-    unsigned int combatPower;
-    unsigned int loot;
-    unsigned int damage;
+    int combatPower;
+    int loot;
+    int damage;
 public:
-    Balrog(unsigned int combatPower = 15, unsigned int loot = 100, unsigned int
-    damage = 9001);
+    Balrog(int combatPower = 15, int loot = 100, int damage = 9001);
 
     /**
 * returns the combat power of a monster or a pack
 */
-    unsigned int calculateCombatPower() override;
+    int calculateCombatPower() const override;
     /**
     * returns the loot of a monster or a pack
     */
-    unsigned int calculateLoot() override;
+    int calculateLoot() const override;
     /**
     * returns the damage of a monster or a pack
     */
-    unsigned int calculateDamage() override;
+    int calculateDamage() const override;
 };
 

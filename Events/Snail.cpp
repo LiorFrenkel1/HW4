@@ -1,5 +1,19 @@
-//
-// Created by liorf on 01/08/2024.
-//
+
+#pragma once
 
 #include "Snail.h"
+
+Snail::Snail(int combatPower, int loot, int damage) :
+        combatPower(combatPower), loot(loot), damage(damage){}
+
+int Snail::calculateCombatPower() const {
+    return this->combatPower;
+}
+
+int Snail::calculateLoot() const {
+    return this->loot;
+}
+
+int Snail::calculateDamage() const {
+    return this->damage;
+};

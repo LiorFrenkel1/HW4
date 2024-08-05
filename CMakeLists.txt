@@ -8,18 +8,24 @@ include_directories(Events)
 include_directories(Players)
 
 add_executable(HW4
+        Events/Balrog.cpp
+        Events/Balrog.h
         Events/Event.h
+        Events/Monster.cpp
+        Events/Monster.h
+        Events/Pack.cpp
+        Events/Pack.h
+        Events/PotionsMerchant.cpp
+        Events/PotionsMerchant.h
+        Events/Slime.cpp
+        Events/Slime.h
+        Events/Snail.cpp
+        Events/Snail.h
+        Events/SolarEclipse.cpp
+        Events/SolarEclipse.h
         Players/Player.h
         main.cpp
         MatamStory.cpp
         MatamStory.h
         Utilities.cpp
-        Utilities.h
-        Events/Monster.h
-        Events/Pack.h
-        Events/Pack.h
-        Events/Balrog.h
-        Events/Slime.h
-        Events/Snail.h
-        Events/PotionsMerchant.h
-        Events/SolarEclipse.h)
+        Utilities.h)

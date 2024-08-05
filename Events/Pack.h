@@ -5,13 +5,12 @@
 
 class Pack : public Monster {
 private:
-    std::vector<Monster> monsters;
+    std::vector<Monster*> monsters;
 public:
     /**
-     * Constructor for pack
-     * @param first The first monster added to pack (the order doesn't matter)
+     * Constructor for pack, creates an empty pack
      */
-    Pack(Monster& first);
+    Pack();
 
     /**
      * Adds a monster to pack
@@ -22,14 +21,14 @@ public:
     /**
     * returns the combat power of a monster or a pack
     */
-    unsigned int calculateCombatPower() override;
+    int calculateCombatPower() const override;
     /**
     * returns the loot of a monster or a pack
     */
-    unsigned int calculateLoot() override;
+    int calculateLoot() const override;
     /**
     * returns the damage of a monster or a pack
     */
-    unsigned int calculateDamage() override;
+    int calculateDamage() const override;
 };
 
