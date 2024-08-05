@@ -5,12 +5,13 @@
 
 #include "Players/Player.h"
 #include "Events/Event.h"
+#include <vector>
 
 
 class MatamStory{
 private:
-    unsigned int m_turnIndex;
-
+    std::vector<Event*> events;
+    std::vector<Player*> players;
     /**
      * Playes a single turn for a player
      *
