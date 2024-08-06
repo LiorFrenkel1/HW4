@@ -10,13 +10,13 @@ MatamStory::MatamStory(std::istream& eventsStream, std::istream& playersStream) 
         eventName = "";
         eventsStream >> eventName;
         if (eventName == "Balrog") {
-            Balrog Bla;
-            SolarEclipse s;
             this->events.push_back(std::make_shared<Balrog>());
         } else if (eventName == "Slime") {
             this->events.push_back(std::make_shared<Slime>());
         } else if (eventName == "Snail") {
             this->events.push_back(std::make_shared<Snail>());
+        } else if (eventName == "Pack") {
+            this->events.push_back(std::make_shared<Pack>(readPack(eventsStream)));
         } else if (eventName == "SolarEclipse") {
             this->events.push_back(std::make_shared<SolarEclipse>());
         } else if (eventName == "PotionsMerchant") {
@@ -67,6 +67,10 @@ MatamStory::MatamStory(std::istream& eventsStream, std::istream& playersStream) 
         throw std::runtime_error("Invalid Players File");
     }
     currentPlayer = this->players[0];
+}
+
+Pack MatamStory::readPack(std::istream& eventsStream) {
+    //TODO create readPack
 }
 
 void MatamStory::playTurn(Player& player, int index) {
@@ -186,3 +190,4 @@ int MatamStory::getLeaderBoardBestPlayerIndex(
     }
     return currentIndex;
 }
+

@@ -12,6 +12,7 @@
 #include "Events/Balrog.h"
 #include "Events/Snail.h"
 #include "Events/Slime.h"
+#include "Events/Pack.h"
 #include "Events/SolarEclipse.h"
 #include "Events/PotionsMerchant.h"
 #include <vector>
@@ -88,4 +89,6 @@ public:
      * @return - void
     */
     void play();
+
+    Pack readPack(std::istream& eventsStream);
 };
