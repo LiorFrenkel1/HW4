@@ -87,7 +87,7 @@ public:
     /**
      * doing potionsMerchant event according to the character
      */
-    void potionMerchantEvent();
+    string potionMerchantEvent();
 
     /**
      * doing solarEclipseEvent according to the job.

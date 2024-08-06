@@ -1,13 +1,5 @@
 
 #include "MatamStory.h"
-#include <stdexcept>
-#include "Utilities.h"
-#include "Balrog.h"
-#include "Slime.h"
-#include "Snail.h"
-#include "SolarEclipse.h"
-#include "PotionsMerchant.h"
-#include "Job.h"
 
 MatamStory::MatamStory(std::istream& eventsStream, std::istream& playersStream) :
         events(std::vector<std::shared_ptr<Event>>()),
@@ -78,11 +70,14 @@ MatamStory::MatamStory(std::istream& eventsStream, std::istream& playersStream) 
 }
 
 void MatamStory::playTurn(Player& player, int index) {
-    printTurnDetails(index, player, *this->events[this->eventIndex]);
+    printTurnDetails(index, *this->currentPlayer, *this->events[this->eventIndex]);
+    if (this->currentPlayer->getHealthPoints() == 0) {
+        return;
+    }
     if (this->eventIndex == this->events.size()) {
         this->eventIndex = 0;
     }
-    *this->events[this->eventIndex]->event(*this);
+    printTurnOutcome(this->events[this->eventIndex]->event(*this->currentPlayer));
     this->eventIndex++;
 }
 
@@ -91,7 +86,7 @@ void MatamStory::playRound() {
     printRoundStart();
 
     for (int i = 0; i < this->players.size(); i++) {
-        this->currentPlayer = this->players[0];
+        this->currentPlayer = this->players[i];
         playTurn(*this->currentPlayer, i);
     }
 
@@ -99,24 +94,43 @@ void MatamStory::playRound() {
 
     printLeaderBoardMessage();
 
-    /*===== TODO: Print leaderboard entry for each player using "printLeaderBoardEntry" =====*/
-
-    /*=======================================================================================*/
+    for (int i = 0; i < this->players.size(); i++) {
+        printLeaderBoardEntry(i + 1, getLeaderBoardPlayerByIndex(i));
+    }
 
     printBarrier();
 }
 
 bool MatamStory::isGameOver() const {
-    /*===== TODO: Implement the game over condition =====*/
-    return false; // Replace this line
-    /*===================================================*/
+    if (isEveryOneDead()) {
+        return true;
+    }
+    for (const std::shared_ptr<Player>& player: this->players) {
+        if (player->getLevel() == 10) {
+            return true;
+        }
+    }
+    return false;
+}
+
+bool MatamStory::isEveryOneDead() const {
+    bool isAlive = false;
+    for (const std::shared_ptr<Player>& player : this->players) {
+        if (player->getHealthPoints() > 0) {
+            isAlive = true;
+            break;
+        }
+    }
+    return isAlive;
 }
 
 void MatamStory::play() {
     printStartMessage();
-    /*===== TODO: Print start message entry for each player using "printStartPlayerEntry" =====*/
 
-    /*=========================================================================================*/
+    for (int i = 0; i < this->players.size(); i++) {
+        printStartPlayerEntry(i, *this->players[i]);
+    }
+
     printBarrier();
 
     while (!isGameOver()) {
@@ -124,7 +138,51 @@ void MatamStory::play() {
     }
 
     printGameOver();
-    /*===== TODO: Print either a "winner" message or "no winner" message =====*/
 
-    /*========================================================================*/
+    if (isEveryOneDead()) {
+        printNoWinners();
+    } else {
+        printWinner(*this->players[getLeaderBoardBestPlayerIndex(this->players)]);
+    }
+}
+
+Player& MatamStory::getLeaderBoardPlayerByIndex(int index) {
+    std::vector<std::shared_ptr<Player>> temp(this->players);
+    for (int i = 0; i < index - 1; i++) {
+        temp.erase(temp.begin() + getLeaderBoardBestPlayerIndex(temp));
+    }
+    return *temp[getLeaderBoardBestPlayerIndex(temp)];
+}
+
+int MatamStory::getLeaderBoardBestPlayerIndex(
+        std::vector<std::shared_ptr<Player>>& playersVector) {
+    if (playersVector.size() == 1) {
+        return 0;
+    }
+    int currentIndex = 0, currentLevel = playersVector[0]->getLevel();
+    int currentCoins = playersVector[0]->getCoins();
+    string currentName = playersVector[0]->getName();
+    for (int i = 1; i < playersVector.size(); i++) {
+        if (playersVector[i]->getLevel() > currentLevel) {
+            currentIndex = i;
+            currentLevel = playersVector[currentIndex]->getLevel();
+            currentCoins = playersVector[currentIndex]->getCoins();
+            currentName = playersVector[currentIndex]->getName();
+        } else if (playersVector[i]->getLevel() == currentLevel) {
+            if (playersVector[i]->getCoins() > currentCoins) {
+                currentIndex = i;
+                currentLevel = playersVector[currentIndex]->getLevel();
+                currentCoins = playersVector[currentIndex]->getCoins();
+                currentName = playersVector[currentIndex]->getName();
+            } else if (playersVector[i]->getCoins() == currentCoins) {
+                if (playersVector[i]->getName() < currentName) {
+                    currentIndex = i;
+                    currentLevel = playersVector[currentIndex]->getLevel();
+                    currentCoins = playersVector[currentIndex]->getCoins();
+                    currentName = playersVector[currentIndex]->getName();
+                }
+            }
+        }
+    }
+    return currentIndex;
 }

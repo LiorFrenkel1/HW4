@@ -5,9 +5,19 @@
 #include <fstream>
 
 #include "Players/Player.h"
+#include "Players/Job.h"
+#include "Players/Character.h"
 #include "Events/Event.h"
+#include "Events/Monster.h"
+#include "Events/Balrog.h"
+#include "Events/Snail.h"
+#include "Events/Slime.h"
+#include "Events/SolarEclipse.h"
+#include "Events/PotionsMerchant.h"
 #include <vector>
 #include <memory>
+#include <stdexcept>
+#include "Utilities.h"
 
 
 class MatamStory{
@@ -37,6 +47,27 @@ private:
      * @return - true if the game is over, false otherwise
     */
     bool isGameOver() const;
+
+    /**
+     * Checks if every player is dead
+     *
+     * @return - true if all the players dead, false otherwise
+     */
+    bool isEveryOneDead() const;
+
+    /**
+     * Gets a player by his index in the leaderboard
+     *
+     * @return The player in the index in the leaderboard
+     */
+    Player& getLeaderBoardPlayerByIndex(int index);
+
+    /**
+     * Gets the player that is in the top of the leaderboard
+     * @param players
+     * @return The index of the best player
+     */
+    static int getLeaderBoardBestPlayerIndex(std::vector<std::shared_ptr<Player>>& players);
 
 public:
     std::shared_ptr<Player> currentPlayer;

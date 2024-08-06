@@ -8,7 +8,7 @@ class PotionsMerchant : public Event {
     * Activates the potions merchant event upon a player
     * @param game
     */
-    std::string event(MatamStory& game) override;
+    string event(Player& player) override;
 
     string getDescription() const override;
 };

@@ -69,7 +69,7 @@ bool Player::isFullHP() const {
         return currentHP == maxHP;
 }
 
-void Player::potionMerchantEvent() {
+string Player::potionMerchantEvent() {
     this->character.potionsMerchantEvent(*this);
 }
 
