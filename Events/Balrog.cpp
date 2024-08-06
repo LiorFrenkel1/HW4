@@ -1,8 +1,8 @@
 
 #include "Balrog.h"
 
-Balrog::Balrog(int combatPower, int loot, int damage) :
-        combatPower(combatPower), loot(loot), damage(damage) {}
+Balrog::Balrog(int combatPower, int loot, int damage) : combatPower(combatPower),
+loot(loot), damage(damage) {}
 
 int Balrog::calculateCombatPower() const {
     return this->combatPower;

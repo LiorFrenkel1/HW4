@@ -70,7 +70,7 @@ bool Player::isFullHP() const {
 }
 
 string Player::potionMerchantEvent() {
-    this->character.potionsMerchantEvent(*this);
+    return this->character.potionsMerchantEvent(*this);
 }
 
 string Player::solarEclipse() {
