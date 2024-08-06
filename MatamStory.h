@@ -14,6 +14,7 @@ class MatamStory{
 private:
     std::vector<std::shared_ptr<Event>> events;
     std::vector<std::shared_ptr<Player>> players;
+    int eventIndex;
     /**
      * Playes a single turn for a player
      *
@@ -21,7 +22,7 @@ private:
      *
      * @return - void
     */
-    void playTurn(Player& player);
+    void playTurn(Player& player, int index);
 
     /**
      * Plays a single round of the game
@@ -38,7 +39,6 @@ private:
     bool isGameOver() const;
 
 public:
-    std::shared_ptr<Event> currentEvent;
     std::shared_ptr<Player> currentPlayer;
     /**
      * Constructor of MatamStory class

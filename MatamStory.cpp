@@ -1,48 +1,97 @@
 
-#include <iostream>
-#include <fstream>
-
 #include "MatamStory.h"
 #include <stdexcept>
 #include "Utilities.h"
+#include "Balrog.h"
+#include "Slime.h"
+#include "Snail.h"
+#include "SolarEclipse.h"
+#include "PotionsMerchant.h"
+#include "Job.h"
 
-MatamStory::MatamStory(std::ifstream& eventsStream, std::ifstream& playersStream) :
+MatamStory::MatamStory(std::istream& eventsStream, std::istream& playersStream) :
 events(std::vector<std::shared_ptr<Event>>()),
-players(std::vector<std::shared_ptr<Player>>()) {
+players(std::vector<std::shared_ptr<Player>>()), eventIndex(0) {
     //Read events
     string eventName;
-    if (!eventsStream.is_open())
     while (!eventsStream) {
         eventName = "";
         eventsStream >> eventName;
-        if
-        if (eventName == "balrog") {
-
+        if (eventName == "Balrog") {
+            this->events.push_back(std::make_shared<Balrog>());
+        } else if (eventName == "Slime") {
+            this->events.push_back(std::make_shared<Slime>());
+        } else if (eventName == "Snail") {
+            this->events.push_back(std::make_shared<Snail>());
+        } else if (eventName == "SolarEclipse") {
+            this->events.push_back(std::make_shared<SolarEclipse>());
+        } else if (eventName == "PotionsMerchant") {
+            this->events.push_back(std::make_shared<PotionsMerchant>());
         } else {
-            throw std::
+            throw std::runtime_error("Invalid Events File");
         }
     }
-
+    if (this->events.size() < 2) {
+        throw std::runtime_error("Invalid Events File");
+    }
+    //Read players
+    string playerName, playerJob, playerCharacter;
+    while (!playersStream) {
+        playerName = "";
+        playerJob = "";
+        playerCharacter = "";
+        playersStream >> playerName;
+        playersStream >> playerJob;
+        playersStream >> playerCharacter;
+        if (playerCharacter == "Responsible") {
+            Responsible car;
+            if (playerJob == "Warrior") {
+                this->players.push_back(std::make_shared<Warrior>(playerName, car));
+            } else if (playerJob == "Magician") {
+                this->players.push_back(std::make_shared<Magician>(playerName, car));
+            } else if (playerJob == "Archer") {
+                this->players.push_back(std::make_shared<Archer>(playerName, car));
+            } else {
+                throw std::runtime_error("Invalid Players File");
+            }
+        } else if (playerCharacter == "RiskTaker") {
+            RiskTaker car;
+            if (playerJob == "Warrior") {
+                this->players.push_back(std::make_shared<Warrior>(playerName, car));
+            } else if (playerJob == "Magician") {
+                this->players.push_back(std::make_shared<Magician>(playerName, car));
+            } else if (playerJob == "Archer") {
+                this->players.push_back(std::make_shared<Archer>(playerName, car));
+            } else {
+                throw std::runtime_error("Invalid Players File");
+            }
+        } else {
+            throw std::runtime_error("Invalid Players File");
+        }
+    }
+    if (this->players.size() < 2 || this->players.size() > 6) {
+        throw std::runtime_error("Invalid Players File");
+    }
+    currentPlayer = this->players[0];
 }
 
-void MatamStory::playTurn(Player& player) {
-
-    /**
-     * Steps to implement (there may be more, depending on your design):
-     * 1. Get the next event from the events list
-     * 2. Print the turn details with "printTurnDetails"
-     * 3. Play the event
-     * 4. Print the turn outcome with "printTurnOutcome"
-    */
+void MatamStory::playTurn(Player& player, int index) {
+    printTurnDetails(index, player, *this->events[this->eventIndex]);
+    if (this->eventIndex == this->events.size()) {
+        this->eventIndex = 0;
+    }
+    *this->events[this->eventIndex]->event(*this);
+    this->eventIndex++;
 }
 
 void MatamStory::playRound() {
 
     printRoundStart();
 
-    /*===== TODO: Play a turn for each player =====*/
-
-    /*=============================================*/
+    for (int i = 0; i < this->players.size(); i++) {
+        this->currentPlayer = this->players[0];
+        playTurn(*this->currentPlayer, i);
+    }
 
     printRoundEnd();
 

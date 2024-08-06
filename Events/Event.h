@@ -3,6 +3,7 @@
 
 #include "../Players/Player.h"
 #include "../MatamStory.h"
+#include "../Utilities.h"
 
 class Event {
 public:
