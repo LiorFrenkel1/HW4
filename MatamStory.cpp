@@ -85,7 +85,7 @@ void MatamStory::playRound() {
 
     printRoundStart();
 
-    for (int i = 0; i < this->players.size(); i++) {
+    for (long unsigned int i = 0; i < this->players.size(); i++) {
         this->currentPlayer = this->players[i];
         playTurn(*this->currentPlayer, i);
     }
@@ -94,7 +94,7 @@ void MatamStory::playRound() {
 
     printLeaderBoardMessage();
 
-    for (int i = 0; i < this->players.size(); i++) {
+    for (long unsigned int i = 0; i < this->players.size(); i++) {
         printLeaderBoardEntry(i + 1, getLeaderBoardPlayerByIndex(i));
     }
 
@@ -127,7 +127,7 @@ bool MatamStory::isEveryOneDead() const {
 void MatamStory::play() {
     printStartMessage();
 
-    for (int i = 0; i < this->players.size(); i++) {
+    for (long unsigned int i = 0; i < this->players.size(); i++) {
         printStartPlayerEntry(i, *this->players[i]);
     }
 
@@ -162,7 +162,7 @@ int MatamStory::getLeaderBoardBestPlayerIndex(
     int currentIndex = 0, currentLevel = playersVector[0]->getLevel();
     int currentCoins = playersVector[0]->getCoins();
     string currentName = playersVector[0]->getName();
-    for (int i = 1; i < playersVector.size(); i++) {
+    for (long unsigned int i = 1; i < playersVector.size(); i++) {
         if (playersVector[i]->getLevel() > currentLevel) {
             currentIndex = i;
             currentLevel = playersVector[currentIndex]->getLevel();
