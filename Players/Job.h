@@ -7,7 +7,7 @@
 class MagicalCharacter : public Player {
 public:
     MagicalCharacter(string name, Character& characterToPlayer);
-    void solarEclipse() override;
+    string solarEclipse() override;
 };
 
 /**

@@ -92,5 +92,5 @@ public:
     /**
      * doing solarEclipseEvent according to the job.
      */
-    virtual void solarEclipse();
+    virtual string solarEclipse();
 };

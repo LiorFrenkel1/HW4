@@ -24,4 +24,4 @@ string Slime::getDescription() const {
 
 int Slime::groupSize() const {
     return 1;
-};
+}

@@ -6,9 +6,9 @@
 MagicalCharacter::MagicalCharacter(std::string name, Character &characterToPlayer) :
 Player(name, characterToPlayer) {}
 
-void MagicalCharacter::solarEclipse() {
+string MagicalCharacter::solarEclipse() {
     force++;
-
+    return getSolarEclipseMessage(*this, 1);
 }
 
 //----------------------------------Magician--------------------------------------------------------
@@ -29,13 +29,16 @@ string CloseFighter::encounter(int combatPower, int loot, int damage) {
         level++;
         coins += loot;
         currentHP -= 10;
+        if (currentHP < 0) {
+            currentHP = 0;
+        }
         return getEncounterWonMessage(*this, loot);
     } else {
         currentHP -= damage;
+        if (currentHP < 0) {
+            currentHP = 0;
+        }
         return getEncounterLostMessage(*this, damage);
-    }
-    if (currentHP < 0) {
-        currentHP = 0;
     }
 }
 

@@ -23,7 +23,7 @@ public:
     */
     int calculateDamage() const override;
 
-    string getDescription() const override;
+    std::string getDescription() const override;
 
     int groupSize() const override;
 };

@@ -20,28 +20,34 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4ea02e3-cfb4-472b-982f-819d67d5ed02" name="Changes" comment="">
+    <list default="true" id="abac9069-489f-473a-9502-2dd0c47d6e70" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Events/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Events/Balrog.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Events/Balrog.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Events/Balrog.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/Balrog.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Events/Event.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/Event.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Events/Monster.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Events/Monster.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Events/Monster.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/Monster.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Events/Pack.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Events/Pack.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Events/Pack.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/Pack.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Events/PotionsMerchant.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Events/PotionsMerchant.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Events/PotionsMerchant.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/PotionsMerchant.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Events/Slime.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Events/Slime.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Events/Slime.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/Slime.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Events/Snail.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Events/Snail.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Events/Snail.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/Snail.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Events/SolarEclipse.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Events/SolarEclipse.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Events/SolarEclipse.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/SolarEclipse.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatamStory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MatamStory.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Players/Job.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Players/Job.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Players/Job.h" beforeDir="false" afterPath="$PROJECT_DIR$/Players/Job.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Players/Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Players/Player.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Players/Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Players/Player.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-c8cd5a81c6fa4a40248c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-08-05T14-49-43-0886.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,10 +70,9 @@
     <option name="minorVersion" value="3.2" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 6
 }</component>
-  <component name="ProjectId" id="2kEcW63h5d9aXBCPNXCGEnq4sbU" />
+  <component name="ProjectId" id="2kI5liwd46ipoT96jyoHESS4yuh" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -90,11 +95,6 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HW4" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HW4" TARGET_NAME="HW4" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="HW4" RUN_TARGET_NAME="HW4">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -104,12 +104,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a4ea02e3-cfb4-472b-982f-819d67d5ed02" name="Changes" comment="" />
-      <created>1722852205335</created>
+      <changelist id="abac9069-489f-473a-9502-2dd0c47d6e70" name="Changes" comment="" />
+      <created>1722958403125</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1722852205335</updated>
-      <workItem from="1722852207722" duration="4546000" />
+      <updated>1722958403125</updated>
+      <workItem from="1722958405335" duration="2475000" />
+      <workItem from="1722970292016" duration="1118000" />
     </task>
     <servers />
   </component>

@@ -2,13 +2,13 @@
 #pragma once
 #include "Event.h"
 
-class Monster : public Event{
+class Monster : public Event {
 public:
     /**
      * Starts an encounter of the current player with a monster (or a pack)
      * @param game
      */
-    string event(MatamStory& game) override;
+    std::string event(MatamStory& game) override;
 
     /**
      * returns the combat power of a monster or a pack

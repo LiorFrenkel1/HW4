@@ -24,4 +24,4 @@ string Snail::getDescription() const {
 
 int Snail::groupSize() const {
     return 1;
-};
+}

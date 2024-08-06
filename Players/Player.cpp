@@ -73,9 +73,11 @@ void Player::potionMerchantEvent() {
     this->character.potionsMerchantEvent(*this);
 }
 
-void Player::solarEclipse() {
+string Player::solarEclipse() {
     if (force > 0) {
         force--;
+        return getSolarEclipseMessage(*this, -1);
     }
+    return getSolarEclipseMessage(*this, 0);
 }
 

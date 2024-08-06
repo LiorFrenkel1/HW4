@@ -16,7 +16,7 @@ int Balrog::calculateDamage() const {
     return this->damage;
 }
 
-string Balrog::getDescription() const {
+std::string Balrog::getDescription() const {
     return "Balrog (power " + std::to_string(this->calculateCombatPower()) + ", loot "
     + std::to_string(this->calculateLoot()) + ", damage " +
     std::to_string(this->calculateDamage()) + ")";
@@ -24,4 +24,4 @@ string Balrog::getDescription() const {
 
 int Balrog::groupSize() const {
     return 1;
-};
+}

@@ -10,15 +10,16 @@
 #include "Job.h"
 
 MatamStory::MatamStory(std::istream& eventsStream, std::istream& playersStream) :
-events(std::vector<std::shared_ptr<Event>>()),
-players(std::vector<std::shared_ptr<Player>>()), eventIndex(0) {
+        events(std::vector<std::shared_ptr<Event>>()),
+        players(std::vector<std::shared_ptr<Player>>()), eventIndex(0) {
     //Read events
     string eventName;
     while (!eventsStream) {
         eventName = "";
         eventsStream >> eventName;
         if (eventName == "Balrog") {
-            Balrog b;
+            Balrog Bla;
+            SolarEclipse s;
             this->events.push_back(std::make_shared<Balrog>());
         } else if (eventName == "Slime") {
             this->events.push_back(std::make_shared<Slime>());
