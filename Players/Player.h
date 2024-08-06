@@ -69,8 +69,9 @@ public:
      * otherwise, loose HP in amount of combatPower
      * @param combatPower
      * @param loot
+     * return the outcome
      */
-    virtual void encounter(int combatPower, int loot, int damage);
+    virtual string encounter(int combatPower, int loot, int damage);
 
     /**
      * Use money for one potion and get the HP, not more than the max HP

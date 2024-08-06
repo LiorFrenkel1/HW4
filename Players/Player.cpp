@@ -1,4 +1,5 @@
 #include "Player.h"
+#include "Utilities.h"
 #include <stdexcept>
 //-----------------------------------C'tor--------------------------------------------------------
 Player::Player(string name, Character& characterToPlayer) : name(name), level(1), force(5),
@@ -39,16 +40,18 @@ string Player::getDescription() const {
 
 //------------------------------------Added functions----------------------------------------------
 
-void Player::encounter(int combatPower, int loot, int damage) {
+string Player::encounter(int combatPower, int loot, int damage) {
     int playerCombatPower = this->level + this->force;
     if (playerCombatPower > combatPower) {
         level++;
         coins += loot;
+        return getEncounterWonMessage(*this, loot);
     } else {
         currentHP -= damage;
         if (currentHP < 0) {
             currentHP = 0;
         }
+        return getEncounterLostMessage(*this, damage);
     }
 }
 

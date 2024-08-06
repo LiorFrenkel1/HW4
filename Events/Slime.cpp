@@ -15,3 +15,13 @@ int Slime::calculateLoot() const {
 int Slime::calculateDamage() const {
     return this->damage;
 };
+
+string Slime::getDescription() const {
+    return "Slime (power " + std::to_string(this->calculateCombatPower()) + ", loot "
+           + std::to_string(this->calculateLoot()) + ", damage " +
+           std::to_string(this->calculateDamage()) + ")";
+}
+
+int Slime::groupSize() const {
+    return 1;
+};

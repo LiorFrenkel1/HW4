@@ -18,6 +18,7 @@ players(std::vector<std::shared_ptr<Player>>()), eventIndex(0) {
         eventName = "";
         eventsStream >> eventName;
         if (eventName == "Balrog") {
+            Balrog b;
             this->events.push_back(std::make_shared<Balrog>());
         } else if (eventName == "Slime") {
             this->events.push_back(std::make_shared<Slime>());

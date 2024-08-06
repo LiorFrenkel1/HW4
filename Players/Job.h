@@ -17,7 +17,7 @@ public:
 class CloseFighter : public Player {
 public:
     CloseFighter(string name, Character& characterToPlayer);
-    void encounter(int combatPower, int loot, int damage) override;
+    string encounter(int combatPower, int loot, int damage) override;
 };
 
 class Magician : public MagicalCharacter {

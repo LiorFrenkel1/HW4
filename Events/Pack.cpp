@@ -31,3 +31,19 @@ int Pack::calculateDamage() const {
     return sum;
 }
 
+string Pack::getDescription() const {
+    return "Pack of " + std::to_string(this->groupSize()) + " members (power "
+    + std::to_string(this->calculateCombatPower()) + ", loot "
+           + std::to_string(this->calculateLoot()) + ", damage " +
+           std::to_string(this->calculateDamage()) + ")";
+}
+
+int Pack::groupSize() const {
+    int size = 0;
+    for (const std::shared_ptr<Monster>& m: this->monsters) {
+        size += m->groupSize();
+    }
+    return size;
+}
+
+

@@ -1,7 +1,7 @@
 
 #include "Monster.h"
 
-void Monster::event(MatamStory& game) {
-    game.currentPlayer->encounter(this->calculateCombatPower(),
+string Monster::event(MatamStory& game) {
+    return game.currentPlayer->encounter(this->calculateCombatPower(),
                                   this->calculateLoot(), this->calculateDamage());
 }

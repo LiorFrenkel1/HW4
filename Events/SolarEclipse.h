@@ -8,6 +8,8 @@ class SolarEclipse : public Event {
      * Activates the solar eclipse event upon a player
      * @param game
      */
-    void event(MatamStory& game) override;
+    string event(MatamStory& game) override;
+
+    string getDescription() const override;
 };
 

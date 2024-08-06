@@ -32,5 +32,9 @@ public:
     * returns the damage of a monster or a pack
     */
     int calculateDamage() const override;
+
+    string getDescription() const override;
+
+    int groupSize() const override;
 };
 

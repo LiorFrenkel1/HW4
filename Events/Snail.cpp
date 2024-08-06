@@ -15,3 +15,13 @@ int Snail::calculateLoot() const {
 int Snail::calculateDamage() const {
     return this->damage;
 };
+
+string Snail::getDescription() const {
+    return "Snail (power " + std::to_string(this->calculateCombatPower()) + ", loot "
+           + std::to_string(this->calculateLoot()) + ", damage " +
+           std::to_string(this->calculateDamage()) + ")";
+}
+
+int Snail::groupSize() const {
+    return 1;
+};
