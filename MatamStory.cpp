@@ -6,9 +6,7 @@ MatamStory::MatamStory(std::istream& eventsStream, std::istream& playersStream) 
         players(std::vector<std::shared_ptr<Player>>()), eventIndex(0) {
     //Read events
     string eventName;
-    while (!eventsStream) {
-        eventName = "";
-        eventsStream >> eventName;
+    while (eventsStream >> eventName) {
         if (eventName == "Balrog") {
             this->events.push_back(std::make_shared<Balrog>());
         } else if (eventName == "Slime") {
@@ -30,13 +28,8 @@ MatamStory::MatamStory(std::istream& eventsStream, std::istream& playersStream) 
     }
     //Read players
     string playerName, playerJob, playerCharacter;
-    while (!playersStream) {
-        playerName = "";
-        playerJob = "";
-        playerCharacter = "";
-        playersStream >> playerName;
-        playersStream >> playerJob;
-        playersStream >> playerCharacter;
+    while (playersStream >> playerName && playersStream >> playerJob &&
+    playersStream >> playerCharacter) {
         if (playerCharacter == "Responsible") {
             Responsible car;
             if (playerJob == "Warrior") {
@@ -48,7 +41,7 @@ MatamStory::MatamStory(std::istream& eventsStream, std::istream& playersStream) 
             } else {
                 throw std::runtime_error("Invalid Players File");
             }
-        } else if (playerCharacter == "RiskTaker") {
+        } else if (playerCharacter == "RiskTaking") {
             RiskTaker car;
             if (playerJob == "Warrior") {
                 this->players.push_back(std::make_shared<Warrior>(playerName, car));
@@ -131,9 +124,8 @@ bool MatamStory::isEveryOneDead() const {
 
 void MatamStory::play() {
     printStartMessage();
-
     for (long unsigned int i = 0; i < this->players.size(); i++) {
-        printStartPlayerEntry(i, *this->players[i]);
+        printStartPlayerEntry(i + 1, *this->players[i]); //TODO problem lies here, its not the int type its something with utilities probably related to #include
     }
 
     printBarrier();
