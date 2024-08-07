@@ -71,6 +71,7 @@ MatamStory::MatamStory(std::istream& eventsStream, std::istream& playersStream) 
 
 Pack MatamStory::readPack(std::istream& eventsStream) {
     //TODO create readPack
+    return Pack();
 }
 
 void MatamStory::playTurn(Player& player, int index) {

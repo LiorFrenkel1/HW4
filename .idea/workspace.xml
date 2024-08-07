@@ -19,9 +19,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf972200-75ac-4840-9db6-bca44279d35c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events/Balrog.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/Balrog.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatamStory" beforeDir="false" afterPath="$PROJECT_DIR$/MatamStory" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatamStory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MatamStory.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MatamStory.h" beforeDir="false" afterPath="$PROJECT_DIR$/MatamStory.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

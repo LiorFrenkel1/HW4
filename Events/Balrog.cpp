@@ -25,3 +25,13 @@ std::string Balrog::getDescription() const {
 int Balrog::groupSize() const {
     return 1;
 }
+
+void Balrog::addCombatPower(int addPower) {
+    this->combatPower = this->calculateCombatPower() + addPower;
+}
+
+std::string Balrog::event(Player &player) {
+    this->addCombatPower(2);
+    return player.encounter(this->calculateCombatPower() - 2,
+                            this->calculateLoot(), this->calculateDamage());
+}
