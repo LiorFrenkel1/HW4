@@ -3,6 +3,8 @@
 
 #include "../Players/Player.h"
 
+class Player;
+
 class Event {
 public:
     /**

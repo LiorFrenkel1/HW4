@@ -5,8 +5,8 @@
 #include <fstream>
 
 #include "Players/Player.h"
-#include "Players/Job.h"
 #include "Players/Character.h"
+#include "Job.h"
 #include "Events/Event.h"
 #include "Events/Monster.h"
 #include "Events/Balrog.h"
@@ -20,6 +20,19 @@
 #include <stdexcept>
 #include "Utilities.h"
 
+class Player;
+class Character;
+class Warrior;
+class Magician;
+class Archer;
+class Event;
+class Monster;
+class Balrog;
+class Snail;
+class Slime;
+class Pack;
+class SolarEclipse;
+class PotionsMerchant;
 
 class MatamStory{
 private:

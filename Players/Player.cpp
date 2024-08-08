@@ -1,5 +1,4 @@
 #include "Player.h"
-#include "Utilities.h"
 #include <stdexcept>
 //-----------------------------------C'tor--------------------------------------------------------
 Player::Player(string name, Character& characterToPlayer) : name(name), level(1), force(5),

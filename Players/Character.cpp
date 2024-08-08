@@ -1,5 +1,4 @@
 #include "Character.h"
-#include "Utilities.h"
 //--------------------------------------Responsible-------------------------------------------
 string Responsible::getDescription() {
     return "Responsible";
