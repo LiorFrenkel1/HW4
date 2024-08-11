@@ -3,6 +3,7 @@
 
 #include <string>
 #include "Character.h"
+class Event;
 #include "Utilities.h"
 
 using std::string;
