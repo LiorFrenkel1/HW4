@@ -1,12 +1,10 @@
 
 #pragma once
 
-#include "Player.h"
-#include "Event.h"
 #include <string>
 
-class Player;
-class Event;
+#include "Players/Player.h"
+#include "Events/Event.h"
 
 /**
  * Prints the start message of the game
