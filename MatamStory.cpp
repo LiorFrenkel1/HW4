@@ -151,7 +151,7 @@ void MatamStory::play() {
     printStartMessage();
 
     for (long unsigned int i = 0; i < this->players.size(); i++) {
-        printStartPlayerEntry(i + 1, *this->players[i]); //TODO problem lies here, its not the int type its something with utilities probably related to #include
+        printStartPlayerEntry(i + 1, *this->players[i]);
     }
 
     printBarrier();
