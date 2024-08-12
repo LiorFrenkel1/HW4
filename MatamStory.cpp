@@ -140,10 +140,9 @@ bool MatamStory::isEveryOneDead() const {
     for (const std::shared_ptr<Player>& player : this->players) {
         if (player->getHealthPoints() > 0) {
             isAlive = true;
-            break;
         }
     }
-    return isAlive;
+    return !isAlive;
 }
 
 void MatamStory::play() {

@@ -21,6 +21,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04fce849-7df3-4945-b219-f39694c956cf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/MatamStory" beforeDir="false" afterPath="$PROJECT_DIR$/MatamStory" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatamStory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MatamStory.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +90,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1723463316157</updated>
-      <workItem from="1723463318077" duration="367000" />
+      <workItem from="1723463318077" duration="782000" />
     </task>
     <servers />
   </component>
