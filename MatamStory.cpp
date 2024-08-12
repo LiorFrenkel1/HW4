@@ -14,7 +14,11 @@ MatamStory::MatamStory(std::istream& eventsStream, std::istream& playersStream) 
         } else if (eventName == "Snail") {
             this->events.push_back(std::make_shared<Snail>());
         } else if (eventName == "Pack") {
-            this->events.push_back(std::make_shared<Pack>(readPack(eventsStream)));
+            try {
+                this->events.push_back(readPack(eventsStream));
+            } catch (...) {
+                throw;
+            }
         } else if (eventName == "SolarEclipse") {
             this->events.push_back(std::make_shared<SolarEclipse>());
         } else if (eventName == "PotionsMerchant") {
@@ -62,9 +66,30 @@ MatamStory::MatamStory(std::istream& eventsStream, std::istream& playersStream) 
     currentPlayer = this->players[0];
 }
 
-Pack MatamStory::readPack(std::istream& eventsStream) {
-    //TODO create readPack
-    return Pack();
+std::shared_ptr<Pack> MatamStory::readPack(std::istream& eventsStream) {
+    int amountOfMonsters;
+    eventsStream >> amountOfMonsters;
+    std::shared_ptr<Pack> newPack = std::make_shared<Pack>();
+    string monsterName;
+    for (int i = 0; i < amountOfMonsters; i++) {
+        eventsStream >> monsterName;
+        if (monsterName == "Balrog") {
+            newPack->addToPack(std::make_shared<Balrog>());
+        } else if (monsterName == "Slime") {
+            newPack->addToPack(std::make_shared<Slime>());
+        } else if (monsterName == "Snail") {
+            newPack->addToPack(std::make_shared<Snail>());
+        } else if (monsterName == "Pack") {
+            try {
+                newPack->addToPack(readPack(eventsStream));
+            } catch (...) {
+                throw;
+            }
+        } else {
+            throw std::runtime_error("Invalid Events File");
+        }
+    }
+    return std::make_shared<Pack>();
 }
 
 void MatamStory::playTurn(Player& player, int index) {
@@ -123,6 +148,7 @@ bool MatamStory::isEveryOneDead() const {
 }
 
 void MatamStory::play() {
+    printStartPlayerEntry(1, *this->players[0]);
     printStartMessage();
     for (long unsigned int i = 0; i < this->players.size(); i++) {
         printStartPlayerEntry(i + 1, *this->players[i]); //TODO problem lies here, its not the int type its something with utilities probably related to #include

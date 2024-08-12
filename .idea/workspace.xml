@@ -20,14 +20,12 @@
   <component name="ChangeListManager">
     <list default="true" id="cf972200-75ac-4840-9db6-bca44279d35c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Events/Event.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/Event.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events/Pack.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Events/Pack.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events/Pack.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/Pack.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatamStory" beforeDir="false" afterPath="$PROJECT_DIR$/MatamStory" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MatamStory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MatamStory.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MatamStory.h" beforeDir="false" afterPath="$PROJECT_DIR$/MatamStory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Players/Character.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Players/Character.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Players/Job.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Players/Job.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Players/Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Players/Player.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Players/Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Players/Player.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utilities.h" beforeDir="false" afterPath="$PROJECT_DIR$/Utilities.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +92,8 @@
       <workItem from="1722979055866" duration="10000" />
       <workItem from="1723039672934" duration="980000" />
       <workItem from="1723120947967" duration="28000" />
-      <workItem from="1723122604850" duration="2377000" />
+      <workItem from="1723122604850" duration="2563000" />
+      <workItem from="1723457498408" duration="2740000" />
     </task>
     <servers />
   </component>

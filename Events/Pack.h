@@ -18,7 +18,7 @@ public:
      * Adds a monster to pack
      * @param monster
      */
-    void addToPack(std::shared_ptr<Monster>& monster);
+    void addToPack(const std::shared_ptr<Monster>& monster);
 
     /**
     * returns the combat power of a monster or a pack

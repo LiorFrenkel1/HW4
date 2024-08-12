@@ -32,8 +32,8 @@ int Player::getLevel() const {
  */
 string Player::getDescription() const {
     string description;
-    description += name + ", " + job + " with " + character.getDescription() + " character ";
-    description += "(level " + std::to_string(level) + ", force " + std::to_string(force) + ")";
+    description += this->name + ", " + this->job + " with " + this->character.getDescription() + " character ";
+    description += "(level " + std::to_string(this->level) + ", force " + std::to_string(this->force) + ")";
     return description;
 }
 

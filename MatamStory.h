@@ -103,5 +103,5 @@ public:
     */
     void play();
 
-    Pack readPack(std::istream& eventsStream);
+    std::shared_ptr<Pack> readPack(std::istream& eventsStream);
 };
