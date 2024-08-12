@@ -1,7 +1,7 @@
 #include "Player.h"
 #include <stdexcept>
 //-----------------------------------C'tor--------------------------------------------------------
-Player::Player(string name, Character& characterToPlayer) : name(name), level(1), force(5),
+Player::Player(string name, std::shared_ptr<Character> characterToPlayer) : name(name), level(1), force(5),
 currentHP(100),maxHP(100), coins(10), job() ,character(characterToPlayer){
 }
 
@@ -32,7 +32,7 @@ int Player::getLevel() const {
  */
 string Player::getDescription() const {
     string description;
-    description += this->name + ", " + this->job + " with " + this->character.getDescription() + " character ";
+    description += this->name + ", " + this->job + " with " + (*this->character).getDescription() + " character ";
     description += "(level " + std::to_string(this->level) + ", force " + std::to_string(this->force) + ")";
     return description;
 }
@@ -69,7 +69,7 @@ bool Player::isFullHP() const {
 }
 
 string Player::potionMerchantEvent() {
-    return this->character.potionsMerchantEvent(*this);
+    return (*this->character).potionsMerchantEvent(*this);
 }
 
 string Player::solarEclipse() {

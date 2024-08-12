@@ -2,7 +2,7 @@
 
 //----------------------------------MagicalCharacter------------------------------------------------
 
-MagicalCharacter::MagicalCharacter(std::string name, Character &characterToPlayer) :
+MagicalCharacter::MagicalCharacter(std::string name, std::shared_ptr<Character> characterToPlayer) :
 Player(name, characterToPlayer) {}
 
 string MagicalCharacter::solarEclipse() {
@@ -12,14 +12,14 @@ string MagicalCharacter::solarEclipse() {
 
 //----------------------------------Magician--------------------------------------------------------
 
-Magician::Magician(std::string name, Character &characterToPlayer) :
+Magician::Magician(std::string name, std::shared_ptr<Character> characterToPlayer) :
 MagicalCharacter(name, characterToPlayer){
     job = "Magician";
 }
 
 //----------------------------------CloseFighter----------------------------------------------------
 
-CloseFighter::CloseFighter(std::string name, Character &characterToPlayer) :
+CloseFighter::CloseFighter(std::string name, std::shared_ptr<Character> characterToPlayer) :
 Player(name, characterToPlayer){}
 
 string CloseFighter::encounter(int combatPower, int loot, int damage) {
@@ -43,7 +43,7 @@ string CloseFighter::encounter(int combatPower, int loot, int damage) {
 
 //----------------------------------Warrior---------------------------------------------------------
 
-Warrior::Warrior(std::string name, Character &characterToPlayer) :
+Warrior::Warrior(std::string name, std::shared_ptr<Character> characterToPlayer) :
 CloseFighter(name, characterToPlayer){
     job = "Warrior";
     maxHP = 150;
@@ -51,7 +51,7 @@ CloseFighter(name, characterToPlayer){
 
 //----------------------------------Archer----------------------------------------------------------
 
-Archer::Archer(std::string name, Character &characterToPlayer) :
+Archer::Archer(std::string name, std::shared_ptr<Character> characterToPlayer) :
 Player(name, characterToPlayer){
     job = "Archer";
     coins = 20;

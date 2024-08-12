@@ -2,6 +2,7 @@
 #pragma once
 
 #include <string>
+#include <memory>
 #include "Character.h"
 class Event;
 #include "Utilities.h"
@@ -19,11 +20,11 @@ protected:
     int maxHP; // >0
     int coins;
     string job;
-    Character& character;
+    std::shared_ptr<Character> character;
 
 public:
 
-    Player(string name, Character& characterToPlayer);
+    Player(string name, std::shared_ptr<Character> characterToPlayer);
     /**
      * Gets the description of the player
      *

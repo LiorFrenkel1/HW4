@@ -37,22 +37,21 @@ MatamStory::MatamStory(std::istream& eventsStream, std::istream& playersStream) 
         if (playerCharacter == "Responsible") {
             Responsible car;
             if (playerJob == "Warrior") {
-                this->players.push_back(std::make_shared<Warrior>(playerName, car));
+                this->players.push_back(std::make_shared<Warrior>(playerName, std::make_shared<Responsible>()));
             } else if (playerJob == "Magician") {
-                this->players.push_back(std::make_shared<Magician>(playerName, car));
+                this->players.push_back(std::make_shared<Magician>(playerName, std::make_shared<Responsible>()));
             } else if (playerJob == "Archer") {
-                this->players.push_back(std::make_shared<Archer>(playerName, car));
+                this->players.push_back(std::make_shared<Archer>(playerName, std::make_shared<Responsible>()));
             } else {
                 throw std::runtime_error("Invalid Players File");
             }
         } else if (playerCharacter == "RiskTaking") {
-            RiskTaker car;
             if (playerJob == "Warrior") {
-                this->players.push_back(std::make_shared<Warrior>(playerName, car));
+                this->players.push_back(std::make_shared<Warrior>(playerName, std::make_shared<RiskTaker>()));
             } else if (playerJob == "Magician") {
-                this->players.push_back(std::make_shared<Magician>(playerName, car));
+                this->players.push_back(std::make_shared<Magician>(playerName, std::make_shared<RiskTaker>()));
             } else if (playerJob == "Archer") {
-                this->players.push_back(std::make_shared<Archer>(playerName, car));
+                this->players.push_back(std::make_shared<Archer>(playerName, std::make_shared<RiskTaker>()));
             } else {
                 throw std::runtime_error("Invalid Players File");
             }
@@ -148,8 +147,9 @@ bool MatamStory::isEveryOneDead() const {
 }
 
 void MatamStory::play() {
-    printStartPlayerEntry(1, *this->players[0]);
+
     printStartMessage();
+
     for (long unsigned int i = 0; i < this->players.size(); i++) {
         printStartPlayerEntry(i + 1, *this->players[i]); //TODO problem lies here, its not the int type its something with utilities probably related to #include
     }

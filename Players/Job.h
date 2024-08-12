@@ -6,7 +6,7 @@
  */
 class MagicalCharacter : public Player {
 public:
-    MagicalCharacter(string name, Character& characterToPlayer);
+    MagicalCharacter(string name, std::shared_ptr<Character> characterToPlayer);
     string solarEclipse() override;
 };
 
@@ -16,23 +16,23 @@ public:
  */
 class CloseFighter : public Player {
 public:
-    CloseFighter(string name, Character& characterToPlayer);
+    CloseFighter(string name, std::shared_ptr<Character> characterToPlayer);
     string encounter(int combatPower, int loot, int damage) override;
 };
 
 class Magician : public MagicalCharacter {
 public:
-    Magician(string name, Character& characterToPlayer);
+    Magician(string name, std::shared_ptr<Character> characterToPlayer);
 };
 
 class Warrior : public CloseFighter {
 public:
-    Warrior(string name, Character& characterToPlayer);
+    Warrior(string name, std::shared_ptr<Character> characterToPlayer);
 };
 
 class Archer : public Player {
 public:
-    Archer(string name, Character& characterToPlayer);
+    Archer(string name, std::shared_ptr<Character> characterToPlayer);
 };
 
 
