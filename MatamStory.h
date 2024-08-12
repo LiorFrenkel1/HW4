@@ -35,7 +35,7 @@ class SolarEclipse;
 class PotionsMerchant;
 
 class MatamStory{
-private:
+public:
     std::vector<std::shared_ptr<Event>> events;
     std::vector<std::shared_ptr<Player>> players;
     long unsigned int eventIndex;

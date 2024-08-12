@@ -88,7 +88,7 @@ std::shared_ptr<Pack> MatamStory::readPack(std::istream& eventsStream) {
             throw std::runtime_error("Invalid Events File");
         }
     }
-    return std::make_shared<Pack>();
+    return newPack;
 }
 
 void MatamStory::playTurn(Player& player, int index) {

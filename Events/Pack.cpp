@@ -3,7 +3,7 @@
 
 Pack::Pack() : monsters(std::vector<std::shared_ptr<Monster>>()) {}
 
-void Pack::addToPack(const std::shared_ptr<Monster>& monster) {
+void Pack::addToPack(std::shared_ptr<Monster> monster) {
     this->monsters.push_back(monster);
 }
 
