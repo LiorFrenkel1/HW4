@@ -15,7 +15,7 @@ string Responsible::potionsMerchantEvent(Player& player) {
 
 //---------------------------------------RiskTaker-------------------------------------------------
 string RiskTaker::getDescription() {
-    return "RiskTaker";
+    return "RiskTaking";
 }
 
 string RiskTaker::potionsMerchantEvent(Player &player) {

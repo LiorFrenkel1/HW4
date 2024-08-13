@@ -35,10 +35,11 @@ class SolarEclipse;
 class PotionsMerchant;
 
 class MatamStory{
-public:
+private:
     std::vector<std::shared_ptr<Event>> events;
     std::vector<std::shared_ptr<Player>> players;
     long unsigned int eventIndex;
+    int turnIndex;
     /**
      * Playes a single turn for a player
      *
@@ -46,7 +47,7 @@ public:
      *
      * @return - void
     */
-    void playTurn(Player& player, int index);
+    void playTurn();
 
     /**
      * Plays a single round of the game
@@ -83,8 +84,11 @@ public:
      */
     static int getLeaderBoardBestPlayerIndex(std::vector<std::shared_ptr<Player>>& players);
 
+    std::shared_ptr<Pack> readPack(std::istream& eventsStream);
+
 public:
     std::shared_ptr<Player> currentPlayer;
+
     /**
      * Constructor of MatamStory class
      *
@@ -102,6 +106,4 @@ public:
      * @return - void
     */
     void play();
-
-    std::shared_ptr<Pack> readPack(std::istream& eventsStream);
 };

@@ -3,7 +3,7 @@
 
 MatamStory::MatamStory(std::istream& eventsStream, std::istream& playersStream) :
         events(std::vector<std::shared_ptr<Event>>()),
-        players(std::vector<std::shared_ptr<Player>>()), eventIndex(0) {
+        players(std::vector<std::shared_ptr<Player>>()), eventIndex(0), turnIndex(1) {
     //Read events
     string eventName;
     while (eventsStream >> eventName) {
@@ -91,25 +91,28 @@ std::shared_ptr<Pack> MatamStory::readPack(std::istream& eventsStream) {
     return newPack;
 }
 
-void MatamStory::playTurn(Player& player, int index) {
+void MatamStory::playTurn() {
     if (this->currentPlayer->getHealthPoints() == 0) {
         return;
     }
-    printTurnDetails(index, *this->currentPlayer, *this->events[this->eventIndex]);
+
+    printTurnDetails(this->turnIndex, *this->currentPlayer, *this->events[this->eventIndex]);
+    printTurnOutcome(this->events[this->eventIndex]->event(*this->currentPlayer));
+    this->eventIndex++;
+
     if (this->eventIndex == this->events.size()) {
         this->eventIndex = 0;
     }
-    printTurnOutcome(this->events[this->eventIndex]->event(*this->currentPlayer));
-    this->eventIndex++;
+    this->turnIndex++;
 }
 
 void MatamStory::playRound() {
 
     printRoundStart();
 
-    for (long unsigned int i = 0; i < this->players.size(); i++) {
-        this->currentPlayer = this->players[i];
-        playTurn(*this->currentPlayer, i);
+    for (const std::shared_ptr<Player>& player : this->players) {
+        this->currentPlayer = player;
+        playTurn();
     }
 
     printRoundEnd();
