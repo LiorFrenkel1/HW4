@@ -137,10 +137,8 @@ bool MatamStory::isGameOver() const {
     if (isEveryOneDead()) {
         return true;
     }
-    for (const std::shared_ptr<Player>& player: this->players) {
-        if (player->getLevel() == 10) {
-            return true;
-        }
+    if(isWinner()) {
+        return true;
     }
     return false;
 }
@@ -171,10 +169,10 @@ void MatamStory::play() {
 
     printGameOver();
 
-    if (isEveryOneDead()) {
-        printNoWinners();
-    } else {
+    if (isWinner()) {
         printWinner(*this->players[getLeaderBoardBestPlayerIndex(this->players)]);
+    } else {
+        printNoWinners();
     }
 }
 
@@ -228,4 +226,14 @@ bool lettersOnly(string str) {
         }
     }
     return true;
+}
+
+bool MatamStory::isWinner() const {
+    bool isLevelTen = false;
+    for (const std::shared_ptr<Player>& player: this->players) {
+        if (player->getLevel() >= 10) {
+            isLevelTen = true;
+        }
+    }
+    return isLevelTen;
 }
