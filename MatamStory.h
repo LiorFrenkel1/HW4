@@ -71,6 +71,13 @@ private:
     bool isEveryOneDead() const;
 
     /**
+     * Checks if there is a player at level 10
+     *
+     * @return true if there is, otherwise false
+     */
+    bool isWinner() const;
+
+    /**
      * Gets a player by his index in the leaderboard
      *
      * @return The player in the index in the leaderboard
