@@ -1,6 +1,9 @@
 
 #include "MatamStory.h"
 
+
+bool lettersOnly(string str);
+
 MatamStory::MatamStory(std::istream& eventsStream, std::istream& playersStream) :
         events(std::vector<std::shared_ptr<Event>>()),
         players(std::vector<std::shared_ptr<Player>>()), eventIndex(0), turnIndex(1) {
@@ -34,8 +37,7 @@ MatamStory::MatamStory(std::istream& eventsStream, std::istream& playersStream) 
     string playerName, playerJob, playerCharacter;
     while (playersStream >> playerName && playersStream >> playerJob &&
     playersStream >> playerCharacter) {
-        if(playerName.length() < 3 || playerName.length() > 15)
-        {
+        if(playerName.length() < 3 || playerName.length() > 15 || !lettersOnly(playerName)) {
             throw std::runtime_error("Invalid Players File");
         } else if (playerCharacter == "Responsible") {
             if (playerJob == "Warrior") {
@@ -212,6 +214,17 @@ int MatamStory::getLeaderBoardBestPlayerIndex(
     return currentIndex;
 }
 
+//-------------------------------------helper functions---------------------------------------
+
+bool lettersOnly(string str) {
+    for (char c : str) {
+        if (!(('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))) {
+            return false;
+        }
+    }
+    return true;
+}
+
 bool MatamStory::isWinner() const {
     bool isLevelTen = false;
     for (const std::shared_ptr<Player>& player: this->players) {
@@ -221,4 +234,3 @@ bool MatamStory::isWinner() const {
     }
     return isLevelTen;
 }
-
