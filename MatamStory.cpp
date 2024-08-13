@@ -72,7 +72,7 @@ MatamStory::MatamStory(std::istream& eventsStream, std::istream& playersStream) 
 std::shared_ptr<Pack> MatamStory::readPack(std::istream& eventsStream) {
     int amountOfMonsters;
     eventsStream >> amountOfMonsters;
-    if(amountOfMonsters <= 0) {
+    if(amountOfMonsters <= 1) {
         throw std::runtime_error("Invalid Events File");
     }
     std::shared_ptr<Pack> newPack = std::make_shared<Pack>();
