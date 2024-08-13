@@ -92,10 +92,10 @@ std::shared_ptr<Pack> MatamStory::readPack(std::istream& eventsStream) {
 }
 
 void MatamStory::playTurn(Player& player, int index) {
-    printTurnDetails(index, *this->currentPlayer, *this->events[this->eventIndex]);
     if (this->currentPlayer->getHealthPoints() == 0) {
         return;
     }
+    printTurnDetails(index, *this->currentPlayer, *this->events[this->eventIndex]);
     if (this->eventIndex == this->events.size()) {
         this->eventIndex = 0;
     }
@@ -171,7 +171,7 @@ void MatamStory::play() {
 Player& MatamStory::getLeaderBoardPlayerByIndex(int index) {
     std::vector<std::shared_ptr<Player>> temp(this->players);
     for (int i = 0; i < index - 1; i++) {
-        temp.erase(temp.begin() + getLeaderBoardBestPlayerIndex(temp));
+        temp.erase(temp.begin() + getLeaderBoardBestPlayerIndex(temp) + 1);
     }
     return *temp[getLeaderBoardBestPlayerIndex(temp)];
 }
