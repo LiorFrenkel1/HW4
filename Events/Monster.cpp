@@ -2,6 +2,8 @@
 #include "Monster.h"
 
 std::string Monster::event(Player& player) {
-    return player.encounter(this->calculateCombatPower(),
+    string str = player.encounter(this->calculateCombatPower(),
                                   this->calculateLoot(), this->calculateDamage());
+    this->addCombatPower(2);
+    return str;
 }

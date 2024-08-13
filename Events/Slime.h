@@ -26,4 +26,6 @@ public:
     string getDescription() const override;
 
     int groupSize() const override;
+
+    void addCombatPower(int addPower) override;
 };

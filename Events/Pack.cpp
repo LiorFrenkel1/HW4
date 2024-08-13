@@ -46,4 +46,10 @@ int Pack::groupSize() const {
     return size;
 }
 
+void Pack::addCombatPower(int addPower) {
+    for (std::shared_ptr<Monster> m: this->monsters) {
+        m->addCombatPower(addPower);
+    }
+}
+
 

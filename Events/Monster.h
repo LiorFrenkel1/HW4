@@ -26,5 +26,7 @@ public:
      * returns the size of the group (not 1 when its a pack)
      */
     virtual int groupSize() const = 0;
+
+    virtual void addCombatPower(int addPower) = 0;
 };
 

@@ -11,12 +11,6 @@ public:
     Balrog(int combatPower = 15, int loot = 100, int damage = 9001);
 
     /**
-     * Starts an encounter of the current player with a monster (or a pack)
-     * @param game
-     */
-    std::string event(Player& player) override;
-
-    /**
     * returns the combat power of a monster or a pack
     */
     int calculateCombatPower() const override;
@@ -33,6 +27,6 @@ public:
 
     int groupSize() const override;
 
-    void addCombatPower(int addPower);
+    void addCombatPower(int addPower) override;
 };
 

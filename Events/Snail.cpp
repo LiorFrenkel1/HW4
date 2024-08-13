@@ -25,3 +25,5 @@ string Snail::getDescription() const {
 int Snail::groupSize() const {
     return 1;
 }
+
+void Snail::addCombatPower(int addPower) {}
