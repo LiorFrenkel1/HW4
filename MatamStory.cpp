@@ -35,7 +35,6 @@ MatamStory::MatamStory(std::istream& eventsStream, std::istream& playersStream) 
     while (playersStream >> playerName && playersStream >> playerJob &&
     playersStream >> playerCharacter) {
         if (playerCharacter == "Responsible") {
-            Responsible car;
             if (playerJob == "Warrior") {
                 this->players.push_back(std::make_shared<Warrior>(playerName, std::make_shared<Responsible>()));
             } else if (playerJob == "Magician") {
