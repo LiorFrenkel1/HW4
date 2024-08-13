@@ -34,7 +34,10 @@ MatamStory::MatamStory(std::istream& eventsStream, std::istream& playersStream) 
     string playerName, playerJob, playerCharacter;
     while (playersStream >> playerName && playersStream >> playerJob &&
     playersStream >> playerCharacter) {
-        if (playerCharacter == "Responsible") {
+        if(playerName.length() < 3 || playerName.length() > 15)
+        {
+            throw std::runtime_error("Invalid Players File");
+        } else if (playerCharacter == "Responsible") {
             if (playerJob == "Warrior") {
                 this->players.push_back(std::make_shared<Warrior>(playerName, std::make_shared<Responsible>()));
             } else if (playerJob == "Magician") {
