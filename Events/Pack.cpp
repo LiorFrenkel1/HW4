@@ -39,11 +39,7 @@ string Pack::getDescription() const {
 }
 
 int Pack::groupSize() const {
-    int size = 0;
-    for (const std::shared_ptr<Monster>& m: this->monsters) {
-        size += m->groupSize();
-    }
-    return size;
+    return this->monsters.size();
 }
 
 void Pack::addCombatPower(int addPower) {
