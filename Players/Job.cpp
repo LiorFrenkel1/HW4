@@ -47,6 +47,7 @@ Warrior::Warrior(std::string name, std::shared_ptr<Character> characterToPlayer)
 CloseFighter(name, characterToPlayer){
     job = "Warrior";
     maxHP = 150;
+    currentHP = 150;
 }
 
 //----------------------------------Archer----------------------------------------------------------
