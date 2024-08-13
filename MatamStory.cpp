@@ -170,7 +170,7 @@ void MatamStory::play() {
 
 Player& MatamStory::getLeaderBoardPlayerByIndex(int index) {
     std::vector<std::shared_ptr<Player>> temp(this->players);
-    for (int i = 0; i < index - 1; i++) {
+    for (int i = 0; i < index; i++) {
         temp.erase(temp.begin() + getLeaderBoardBestPlayerIndex(temp));
     }
     return *temp[getLeaderBoardBestPlayerIndex(temp)];
