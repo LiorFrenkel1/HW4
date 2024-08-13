@@ -22,6 +22,7 @@ string RiskTaker::potionsMerchantEvent(Player &player) {
     int potionsBought = 0;
     if (player.getCoins() >= 5 && player.getHealthPoints() < 50) {
         player.buyPotion();
+        potionsBought++;
     }
     return getPotionsPurchaseMessage(player, potionsBought);
 }
