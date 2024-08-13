@@ -78,6 +78,7 @@ std::shared_ptr<Pack> MatamStory::readPack(std::istream& eventsStream) {
     std::shared_ptr<Pack> newPack = std::make_shared<Pack>();
     string monsterName;
     for (int i = 0; i < amountOfMonsters; i++) {
+        monsterName = "";
         eventsStream >> monsterName;
         if (monsterName == "Balrog") {
             newPack->addToPack(std::make_shared<Balrog>());
