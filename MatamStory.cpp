@@ -9,12 +9,6 @@ MatamStory::MatamStory(std::istream& eventsStream, std::istream& playersStream) 
         players(std::vector<std::shared_ptr<Player>>()), eventIndex(0), turnIndex(1) {
     //Read events
     string eventName;
-    monstersMap["Balrog"] = std::make_shared<Balrog>();
-    monstersMap["Slime"] = std::make_shared<Slime>();
-    monstersMap["Snail"] = std::make_shared<Snail>();
-    eventsMap.insert(monstersMap.begin(), monstersMap.end());
-    eventsMap["SolarEclipse"] = std::make_shared<SolarEclipse>();
-    eventsMap["PotionsMerchant"] = std::make_shared<PotionsMerchant>();
     while (eventsStream >> eventName) {
         if (eventName == "Pack") {
             try {
@@ -33,22 +27,19 @@ MatamStory::MatamStory(std::istream& eventsStream, std::istream& playersStream) 
     }
     //Read players
     string playerName, playerJob, playerCharacter;
-    std::map<string,std::shared_ptr<Character>> characters;
-    characters["RiskTaking"] = std::make_shared<RiskTaker>();
-    characters["Responsible"] = std::make_shared<Responsible>();
     while (playersStream >> playerName && playersStream >> playerJob &&
     playersStream >> playerCharacter) {
         if(playerName.length() < 3 || playerName.length() > 15 || !lettersOnly(playerName)) {
             throw std::runtime_error("Invalid Players File");
         }
-        if (characters.find(playerCharacter) == characters.end()) {
+        if (charactersMap.find(playerCharacter) == charactersMap.end()) {
             throw std::runtime_error("Invalid Players File");
         } else if (playerJob == "Warrior") {
-            this->players.push_back(std::make_shared<Warrior>(playerName, characters[playerCharacter]));
+            this->players.push_back(std::make_shared<Warrior>(playerName, charactersMap[playerCharacter]));
         } else if (playerJob == "Magician") {
-            this->players.push_back(std::make_shared<Magician>(playerName, characters[playerCharacter]));
+            this->players.push_back(std::make_shared<Magician>(playerName, charactersMap[playerCharacter]));
         } else if (playerJob == "Archer") {
-            this->players.push_back(std::make_shared<Archer>(playerName, characters[playerCharacter]));
+            this->players.push_back(std::make_shared<Archer>(playerName, charactersMap[playerCharacter]));
         } else {
             throw std::runtime_error("Invalid Players File");
         }

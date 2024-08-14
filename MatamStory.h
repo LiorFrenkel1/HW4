@@ -41,8 +41,17 @@ private:
     std::vector<std::shared_ptr<Player>> players;
     long unsigned int eventIndex;
     int turnIndex;
-    std::map<string, std::shared_ptr<Monster>> monstersMap;
-    std::map<string, std::shared_ptr<Event>> eventsMap;
+    std::map<string, std::shared_ptr<Event>> eventsMap {
+            {"Balrog", std::make_shared<Balrog>()},
+            {"Slime",  std::make_shared<Slime>()},
+            {"Snail",  std::make_shared<Snail>()},
+            {"SolarEclipse", std::make_shared<SolarEclipse>()},
+            {"PotionsMerchant", std::make_shared<PotionsMerchant>()}
+    };
+    std::map<string, std::shared_ptr<Character>> charactersMap {
+            {"RiskTaking", std::make_shared<RiskTaker>()},
+            {"Responsible", std::make_shared<Responsible>()}
+    };
     /**
      * Playes a single turn for a player
      *
