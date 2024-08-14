@@ -19,6 +19,7 @@
 #include <memory>
 #include <stdexcept>
 #include "Utilities.h"
+#include <map>
 
 class Player;
 class Character;
@@ -40,6 +41,8 @@ private:
     std::vector<std::shared_ptr<Player>> players;
     long unsigned int eventIndex;
     int turnIndex;
+    std::map<string, std::shared_ptr<Monster>> monstersMap;
+    std::map<string, std::shared_ptr<Event>> eventsMap;
     /**
      * Playes a single turn for a player
      *
