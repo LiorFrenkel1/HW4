@@ -1,0 +1,1103 @@
+* commit 6673809699acbea10a863eb10400817adb592710
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Thu Aug 15 09:57:39 2024 +0300
+| 
+|     Add dry.pdf
+| 
+|  dry.pdf | Bin 0 -> 232715 bytes
+|  1 file changed, 0 insertions(+), 0 deletions(-)
+| 
+* commit c1de5acd125ab3b86cc31196e5a6831ff95671af
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Thu Aug 15 00:24:57 2024 +0300
+| 
+|     Delete useless files
+| 
+|  .gitmodules                                       |    6 -
+|  .idea/HW4.iml                                     |    2 -
+|  .idea/misc.xml                                    |    4 -
+|  .idea/modules.xml                                 |    8 -
+|  .idea/vcs.xml                                     |    6 -
+|  .idea/workspace.xml                               |  102 --
+|  CMakeLists.txt                                    |   36 -
+|  MatamStory                                        |  Bin 312544 -> 0 bytes
+|  README.md                                         |    7 -
+|  Utilities.cpp                                     |  117 --
+|  Utilities.h                                       |  146 --
+|  cmake-build-debug/.cmake/api/v1/query/cache-v2    |    0
+|  .../.cmake/api/v1/query/cmakeFiles-v1             |    0
+|  .../.cmake/api/v1/query/codemodel-v2              |    0
+|  .../.cmake/api/v1/query/toolchains-v1             |    0
+|  .../v1/reply/cache-v2-854e884c9872fd3d5c8f.json   | 1327 -------------------
+|  .../reply/cmakeFiles-v1-eccdc61b57c7b251d2c8.json |  793 -----------
+|  .../reply/codemodel-v2-6371daed85feb1962dcd.json  |   60 -
+|  .../directory-.-Debug-d0094a50bb2071803777.json   |   14 -
+|  .../v1/reply/index-2024-08-12T11-48-49-0418.json  |  108 --
+|  .../target-HW4-Debug-bc8f7ba0e01361da1841.json    |  320 -----
+|  .../reply/toolchains-v1-471bce94bfe13a5ea4fc.json |   93 --
+|  cmake-build-debug/.ninja_deps                     |  Bin 30948 -> 0 bytes
+|  cmake-build-debug/.ninja_log                      |   18 -
+|  cmake-build-debug/CMakeCache.txt                  |  415 ------
+|  .../CMakeFiles/3.27.8/CMakeCCompiler.cmake        |   74 --
+|  .../CMakeFiles/3.27.8/CMakeCXXCompiler.cmake      |   85 --
+|  .../3.27.8/CMakeDetermineCompilerABI_C.bin        |  Bin 43069 -> 0 bytes
+|  .../3.27.8/CMakeDetermineCompilerABI_CXX.bin      |  Bin 43088 -> 0 bytes
+|  .../CMakeFiles/3.27.8/CMakeRCCompiler.cmake       |    6 -
+|  .../CMakeFiles/3.27.8/CMakeSystem.cmake           |   15 -
+|  .../3.27.8/CompilerIdC/CMakeCCompilerId.c         |  866 ------------
+|  .../CMakeFiles/3.27.8/CompilerIdC/a.exe           |  Bin 43144 -> 0 bytes
+|  .../3.27.8/CompilerIdCXX/CMakeCXXCompilerId.cpp   |  855 ------------
+|  .../CMakeFiles/3.27.8/CompilerIdCXX/a.exe         |  Bin 43172 -> 0 bytes
+|  .../CMakeFiles/CMakeConfigureLog.yaml             |  417 ------
+|  .../CMakeFiles/HW4.dir/Events/Balrog.cpp.obj      |  Bin 73292 -> 0 bytes
+|  .../CMakeFiles/HW4.dir/Events/Monster.cpp.obj     |  Bin 46827 -> 0 bytes
+|  .../CMakeFiles/HW4.dir/Events/Pack.cpp.obj        |  Bin 229743 -> 0 bytes
+|  .../HW4.dir/Events/PotionsMerchant.cpp.obj        |  Bin 52636 -> 0 bytes
+|  .../CMakeFiles/HW4.dir/Events/Slime.cpp.obj       |  Bin 72410 -> 0 bytes
+|  .../CMakeFiles/HW4.dir/Events/Snail.cpp.obj       |  Bin 72410 -> 0 bytes
+|  .../HW4.dir/Events/SolarEclipse.cpp.obj           |  Bin 52394 -> 0 bytes
+|  .../CMakeFiles/HW4.dir/MatamStory.cpp.obj         |  Bin 1391110 -> 0 bytes
+|  .../CMakeFiles/HW4.dir/Players/Character.cpp.obj  |  Bin 55331 -> 0 bytes
+|  .../CMakeFiles/HW4.dir/Players/Job.cpp.obj        |  Bin 89192 -> 0 bytes
+|  .../CMakeFiles/HW4.dir/Players/Player.cpp.obj     |  Bin 103243 -> 0 bytes
+|  .../CMakeFiles/HW4.dir/Utilities.cpp.obj          |  Bin 86625 -> 0 bytes
+|  cmake-build-debug/CMakeFiles/HW4.dir/main.cpp.obj |  Bin 412273 -> 0 bytes
+|  .../CMakeFiles/TargetDirectories.txt              |    3 -
+|  cmake-build-debug/CMakeFiles/clion-Debug-log.txt  |   16 -
+|  .../CMakeFiles/clion-environment.txt              |    4 -
+|  cmake-build-debug/CMakeFiles/cmake.check_cache    |    1 -
+|  cmake-build-debug/CMakeFiles/rules.ninja          |   64 -
+|  cmake-build-debug/HW4.exe                         |  Bin 1848706 -> 0 bytes
+|  cmake-build-debug/Testing/Temporary/LastTest.log  |    3 -
+|  cmake-build-debug/build.ninja                     |  258 ----
+|  cmake-build-debug/cmake_install.cmake             |   49 -
+|  main.cpp                                          |   40 -
+|  tests/test1.events                                |    5 -
+|  tests/test1.expected                              |   96 --
+|  tests/test1.players                               |    3 -
+|  tests/test2.events                                |    4 -
+|  tests/test2.expected                              |    1 -
+|  tests/test2.players                               |    3 -
+|  tests/test3.events                                |    5 -
+|  tests/test3.expected                              |    1 -
+|  tests/test3.players                               |    2 -
+|  68 files changed, 6458 deletions(-)
+| 
+* commit 203492e220585b7a01130bb63af196e2c6949c47
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Thu Aug 15 00:23:28 2024 +0300
+| 
+|     Add map to events
+| 
+|  MatamStory.cpp | 17 ++++-------------
+|  MatamStory.h   | 13 +++++++++++--
+|  2 files changed, 15 insertions(+), 15 deletions(-)
+| 
+* commit 9b5bc17e9ce625a5e7b18dfb016eeb7a0c9607c7
+| Author: roishm <roishmerling@campus.technion.ac.il>
+| Date:   Wed Aug 14 19:03:34 2024 +0300
+| 
+|     adding character map
+| 
+|  MatamStory.cpp | 56 +++++++++++++++++++++++---------------------------------
+|  MatamStory.h   |  3 +++
+|  2 files changed, 26 insertions(+), 33 deletions(-)
+|   
+*   commit 8e928032183ffc77e5b58fbed233f4aae29416b5
+|\  Merge: c065802 85e4a80
+| | Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| | Date:   Tue Aug 13 22:19:39 2024 +0300
+| | 
+| |     Merge branch 'main' of https://github.com/LiorFrenkel1/HW4
+| |   
+| *   commit 85e4a80a50baa038a0ad7514c3e7f1587927d787
+| |\  Merge: a5aa7e0 77677e5
+| | | Author: roishm <roishmerling@campus.technion.ac.il>
+| | | Date:   Tue Aug 13 22:11:50 2024 +0300
+| | | 
+| | |     Merge branch 'main' of https://github.com/LiorFrenkel1/HW4
+| | | 
+| * | commit a5aa7e027b5c58c8cf1c2357d69b15c419d54967
+| | | Author: roishm <roishmerling@campus.technion.ac.il>
+| | | Date:   Tue Aug 13 22:11:38 2024 +0300
+| | | 
+| | |     fixed minimal bug
+| | | 
+| | |  MatamStory.cpp | 2 +-
+| | |  1 file changed, 1 insertion(+), 1 deletion(-)
+| | | 
+* | | commit c06580259bc3508caa17015d810c8e1079c1ea0a
+| |/  Author: LiorFrenkel1 <liorfr5002@gmail.com>
+|/|   Date:   Tue Aug 13 22:19:25 2024 +0300
+| |   
+| |       Fix last bug
+| |   
+| |    Events/Pack.cpp | 6 +-----
+| |    1 file changed, 1 insertion(+), 5 deletions(-)
+| | 
+* | commit 77677e522350109d29d4160c38b2e5a13fb11659
+|\| Merge: 9eab1f5 b571cce
+| | Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| | Date:   Tue Aug 13 22:02:45 2024 +0300
+| | 
+| |     Merge branch 'main' of https://github.com/LiorFrenkel1/HW4
+| |   
+| *   commit b571ccee068c1db4b5089d1789c73b7df3feee60
+| |\  Merge: 9e73147 01f79f9
+| | | Author: roishm <roishmerling@campus.technion.ac.il>
+| | | Date:   Tue Aug 13 21:59:40 2024 +0300
+| | | 
+| | |     Merge branch 'main' of https://github.com/LiorFrenkel1/HW4
+| | | 
+| * | commit 9e73147ce25af8921a8325e7f7d30fcf9b5b7160
+| | | Author: roishm <roishmerling@campus.technion.ac.il>
+| | | Date:   Tue Aug 13 21:59:37 2024 +0300
+| | | 
+| | |     fixing bug of negative pack
+| | | 
+| | |  MatamStory.cpp | 3 +++
+| | |  1 file changed, 3 insertions(+)
+| | | 
+* | | commit 9eab1f5b296e53c2ec49f90ba9c33640ba583bb2
+| |/  Author: LiorFrenkel1 <liorfr5002@gmail.com>
+|/|   Date:   Tue Aug 13 22:02:35 2024 +0300
+| |   
+| |       Fix empty pack bug
+| |   
+| |    MatamStory.cpp | 1 +
+| |    1 file changed, 1 insertion(+)
+| | 
+* | commit 01f79f9567b77fa489d4fdc2d3c3e5ca1a7bd210
+|\| Merge: 7c083c5 7d090bd
+| | Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| | Date:   Tue Aug 13 21:58:29 2024 +0300
+| | 
+| |     Merge branch 'main' of https://github.com/LiorFrenkel1/HW4
+| |   
+| *   commit 7d090bd95d121ba6f209546ce550dbc0594ee9b5
+| |\  Merge: def242f f9a2510
+| | | Author: roishm <roishmerling@campus.technion.ac.il>
+| | | Date:   Tue Aug 13 21:52:18 2024 +0300
+| | | 
+| | |     Merge branch 'main' of https://github.com/LiorFrenkel1/HW4
+| | | 
+| * | commit def242fadc7c3687a1a303a3ffe11c961a79e914
+| | | Author: roishm <roishmerling@campus.technion.ac.il>
+| | | Date:   Tue Aug 13 21:51:51 2024 +0300
+| | | 
+| | |     adding check for letters only playername
+| | | 
+| | |  .gitmodules    |  6 ++++++
+| | |  MatamStory.cpp | 16 ++++++++++++++--
+| | |  2 files changed, 20 insertions(+), 2 deletions(-)
+| | | 
+* | | commit 7c083c5bcc7f62f543a9ff04ef088883aa036919
+| |/  Author: LiorFrenkel1 <liorfr5002@gmail.com>
+|/|   Date:   Tue Aug 13 21:57:27 2024 +0300
+| |   
+| |       Add dead winner
+| |   
+| |    MatamStory.cpp | 22 +++++++++++++++-------
+| |    MatamStory.h   |  7 +++++++
+| |    2 files changed, 22 insertions(+), 7 deletions(-)
+| | 
+* | commit f9a25103090a9c9ecbbda9ee0872b8c2d4c1d184
+| | Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| | Date:   Tue Aug 13 21:44:59 2024 +0300
+| | 
+| |     Fix potions message with risktaking character
+| | 
+| |  Players/Character.cpp | 1 +
+| |  1 file changed, 1 insertion(+)
+| | 
+* | commit 5ce26f90bdddd13f59780d163ed3fd277a6a0da4
+|/  Author: LiorFrenkel1 <liorfr5002@gmail.com>
+|   Date:   Tue Aug 13 21:36:53 2024 +0300
+|   
+|       Fix balrog in pack not updating combatpower
+|   
+|    Events/Balrog.cpp  | 6 ------
+|    Events/Balrog.h    | 8 +-------
+|    Events/Monster.cpp | 4 +++-
+|    Events/Monster.h   | 2 ++
+|    Events/Pack.cpp    | 6 ++++++
+|    Events/Pack.h      | 2 ++
+|    Events/Slime.cpp   | 2 ++
+|    Events/Slime.h     | 2 ++
+|    Events/Snail.cpp   | 2 ++
+|    Events/Snail.h     | 2 ++
+|    10 files changed, 22 insertions(+), 14 deletions(-)
+| 
+* commit 8afc31544b2e2950e1e96a0d62deebad58fe09ec
+| Author: roishm <roishmerling@campus.technion.ac.il>
+| Date:   Tue Aug 13 21:17:22 2024 +0300
+| 
+|     adding check for player name length
+| 
+|  MatamStory.cpp | 5 ++++-
+|  1 file changed, 4 insertions(+), 1 deletion(-)
+|   
+| * commit f05566d60ea680d61a1efdbbe5cfeea4d8a9de34
+|/  Author: LiorFrenkel1 <liorfr5002@gmail.com>
+|   Date:   Tue Aug 13 20:19:06 2024 +0300
+|   
+|       Only need to add try
+|   
+|    .idea/HW4.iml                                    |    2 -
+|    .idea/misc.xml                                   |    4 -
+|    .idea/modules.xml                                |    8 -
+|    .idea/vcs.xml                                    |    6 -
+|    .idea/workspace.xml                              |  102 --
+|    CMakeLists.txt                                   |   36 -
+|    MatamStory                                       |  Bin 312544 -> 0 bytes
+|    README.md                                        |    7 -
+|    Utilities.cpp                                    |  117 --
+|    Utilities.h                                      |  146 --
+|    cmake-build-debug/.cmake/api/v1/query/cache-v2   |    0
+|    .../.cmake/api/v1/query/cmakeFiles-v1            |    0
+|    .../.cmake/api/v1/query/codemodel-v2             |    0
+|    .../.cmake/api/v1/query/toolchains-v1            |    0
+|    .../v1/reply/cache-v2-854e884c9872fd3d5c8f.json  | 1327 ------------------
+|    .../cmakeFiles-v1-eccdc61b57c7b251d2c8.json      |  793 -----------
+|    .../reply/codemodel-v2-6371daed85feb1962dcd.json |   60 -
+|    .../directory-.-Debug-d0094a50bb2071803777.json  |   14 -
+|    .../v1/reply/index-2024-08-12T11-48-49-0418.json |  108 --
+|    .../target-HW4-Debug-bc8f7ba0e01361da1841.json   |  320 -----
+|    .../toolchains-v1-471bce94bfe13a5ea4fc.json      |   93 --
+|    cmake-build-debug/.ninja_deps                    |  Bin 30948 -> 0 bytes
+|    cmake-build-debug/.ninja_log                     |   18 -
+|    cmake-build-debug/CMakeCache.txt                 |  415 ------
+|    .../CMakeFiles/3.27.8/CMakeCCompiler.cmake       |   74 -
+|    .../CMakeFiles/3.27.8/CMakeCXXCompiler.cmake     |   85 --
+|    .../3.27.8/CMakeDetermineCompilerABI_C.bin       |  Bin 43069 -> 0 bytes
+|    .../3.27.8/CMakeDetermineCompilerABI_CXX.bin     |  Bin 43088 -> 0 bytes
+|    .../CMakeFiles/3.27.8/CMakeRCCompiler.cmake      |    6 -
+|    .../CMakeFiles/3.27.8/CMakeSystem.cmake          |   15 -
+|    .../3.27.8/CompilerIdC/CMakeCCompilerId.c        |  866 ------------
+|    .../CMakeFiles/3.27.8/CompilerIdC/a.exe          |  Bin 43144 -> 0 bytes
+|    .../3.27.8/CompilerIdCXX/CMakeCXXCompilerId.cpp  |  855 -----------
+|    .../CMakeFiles/3.27.8/CompilerIdCXX/a.exe        |  Bin 43172 -> 0 bytes
+|    .../CMakeFiles/CMakeConfigureLog.yaml            |  417 ------
+|    .../CMakeFiles/HW4.dir/Events/Balrog.cpp.obj     |  Bin 73292 -> 0 bytes
+|    .../CMakeFiles/HW4.dir/Events/Monster.cpp.obj    |  Bin 46827 -> 0 bytes
+|    .../CMakeFiles/HW4.dir/Events/Pack.cpp.obj       |  Bin 229743 -> 0 bytes
+|    .../HW4.dir/Events/PotionsMerchant.cpp.obj       |  Bin 52636 -> 0 bytes
+|    .../CMakeFiles/HW4.dir/Events/Slime.cpp.obj      |  Bin 72410 -> 0 bytes
+|    .../CMakeFiles/HW4.dir/Events/Snail.cpp.obj      |  Bin 72410 -> 0 bytes
+|    .../HW4.dir/Events/SolarEclipse.cpp.obj          |  Bin 52394 -> 0 bytes
+|    .../CMakeFiles/HW4.dir/MatamStory.cpp.obj        |  Bin 1391110 -> 0 bytes
+|    .../CMakeFiles/HW4.dir/Players/Character.cpp.obj |  Bin 55331 -> 0 bytes
+|    .../CMakeFiles/HW4.dir/Players/Job.cpp.obj       |  Bin 89192 -> 0 bytes
+|    .../CMakeFiles/HW4.dir/Players/Player.cpp.obj    |  Bin 103243 -> 0 bytes
+|    .../CMakeFiles/HW4.dir/Utilities.cpp.obj         |  Bin 86625 -> 0 bytes
+|    .../CMakeFiles/HW4.dir/main.cpp.obj              |  Bin 412273 -> 0 bytes
+|    .../CMakeFiles/TargetDirectories.txt             |    3 -
+|    cmake-build-debug/CMakeFiles/clion-Debug-log.txt |   16 -
+|    .../CMakeFiles/clion-environment.txt             |    4 -
+|    cmake-build-debug/CMakeFiles/cmake.check_cache   |    1 -
+|    cmake-build-debug/CMakeFiles/rules.ninja         |   64 -
+|    cmake-build-debug/HW4.exe                        |  Bin 1848706 -> 0 bytes
+|    cmake-build-debug/Testing/Temporary/LastTest.log |    3 -
+|    cmake-build-debug/build.ninja                    |  258 ----
+|    cmake-build-debug/cmake_install.cmake            |   49 -
+|    main.cpp                                         |   40 -
+|    tests/test1.events                               |    5 -
+|    tests/test1.expected                             |   96 --
+|    tests/test1.players                              |    3 -
+|    tests/test2.events                               |    4 -
+|    tests/test2.expected                             |    1 -
+|    tests/test2.players                              |    3 -
+|    tests/test3.events                               |    5 -
+|    tests/test3.expected                             |    1 -
+|    tests/test3.players                              |    2 -
+|    67 files changed, 6452 deletions(-)
+| 
+* commit 9c7f256cd1675bb3b0c90b07a21d2243e8fd5b58
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Tue Aug 13 20:16:03 2024 +0300
+| 
+|     Set correct Warrior HP
+| 
+|  Players/Job.cpp | 1 +
+|  1 file changed, 1 insertion(+)
+| 
+* commit 0e5920cba538f5a1e3091fe32f09f4a7f38afbc5
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Tue Aug 13 20:04:41 2024 +0300
+| 
+|     Remove useless statement
+| 
+|  .idea/workspace.xml | 6 +-----
+|  MatamStory.cpp      | 1 -
+|  2 files changed, 1 insertion(+), 6 deletions(-)
+| 
+* commit 3b51b72d542abda8ee1685de14f894bc5719af6a
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Tue Aug 13 19:58:08 2024 +0300
+| 
+|     Fix segmantation fault
+| 
+|  .idea/workspace.xml   |  4 +++-
+|  MatamStory.cpp        | 19 +++++++++++--------
+|  MatamStory.h          | 10 ++++++----
+|  Players/Character.cpp |  2 +-
+|  4 files changed, 21 insertions(+), 14 deletions(-)
+| 
+* commit b23d3d7d9b4efff5ea6f0e1331fed4202f19a60c
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Tue Aug 13 19:38:16 2024 +0300
+| 
+|     Fix leaderboard messages
+| 
+|  .idea/workspace.xml | 3 +--
+|  MatamStory.cpp      | 2 +-
+|  2 files changed, 2 insertions(+), 3 deletions(-)
+| 
+* commit 37b4409517d01f9604c93e996556fda4acca37c2
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Tue Aug 13 19:20:19 2024 +0300
+| 
+|     Change typo
+| 
+|  MatamStory.cpp | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+| 
+* commit 2a24bc61b531852490b963ede169523ad8fcad63
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Tue Aug 13 19:17:43 2024 +0300
+| 
+|     fix minor bugs
+| 
+|  .idea/workspace.xml                              | 42 +++++++++++-----------
+|  MatamStory.cpp                                   |  4 +--
+|  cmake-build-debug/Testing/Temporary/LastTest.log |  4 +--
+|  3 files changed, 24 insertions(+), 26 deletions(-)
+| 
+* commit e3d175da84effd55253fb68b03eb1478aa21f908
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Mon Aug 12 17:03:48 2024 +0300
+| 
+|     Fix readPack
+| 
+|  .idea/workspace.xml                               |  35 ++++++++++++--------
+|  Events/Pack.cpp                                   |   2 +-
+|  Events/Pack.h                                     |   2 +-
+|  MatamStory                                        | Bin 312544 -> 312544 bytes
+|  MatamStory.cpp                                    |   2 +-
+|  MatamStory.h                                      |   2 +-
+|  cmake-build-debug/.ninja_deps                     | Bin 0 -> 30948 bytes
+|  cmake-build-debug/.ninja_log                      |  18 ++++++++++
+|  .../CMakeFiles/HW4.dir/Events/Balrog.cpp.obj      | Bin 0 -> 73292 bytes
+|  .../CMakeFiles/HW4.dir/Events/Monster.cpp.obj     | Bin 0 -> 46827 bytes
+|  .../CMakeFiles/HW4.dir/Events/Pack.cpp.obj        | Bin 0 -> 229743 bytes
+|  .../HW4.dir/Events/PotionsMerchant.cpp.obj        | Bin 0 -> 52636 bytes
+|  .../CMakeFiles/HW4.dir/Events/Slime.cpp.obj       | Bin 0 -> 72410 bytes
+|  .../CMakeFiles/HW4.dir/Events/Snail.cpp.obj       | Bin 0 -> 72410 bytes
+|  .../HW4.dir/Events/SolarEclipse.cpp.obj           | Bin 0 -> 52394 bytes
+|  .../CMakeFiles/HW4.dir/MatamStory.cpp.obj         | Bin 0 -> 1391110 bytes
+|  .../CMakeFiles/HW4.dir/Players/Character.cpp.obj  | Bin 0 -> 55331 bytes
+|  .../CMakeFiles/HW4.dir/Players/Job.cpp.obj        | Bin 0 -> 89192 bytes
+|  .../CMakeFiles/HW4.dir/Players/Player.cpp.obj     | Bin 0 -> 103243 bytes
+|  .../CMakeFiles/HW4.dir/Utilities.cpp.obj          | Bin 0 -> 86625 bytes
+|  cmake-build-debug/CMakeFiles/HW4.dir/main.cpp.obj | Bin 0 -> 412273 bytes
+|  cmake-build-debug/HW4.exe                         | Bin 0 -> 1848706 bytes
+|  cmake-build-debug/Testing/Temporary/LastTest.log  |   4 +--
+|  23 files changed, 45 insertions(+), 20 deletions(-)
+| 
+* commit 388f795b28067c1a67e661af72dbdafd2ae3e0d4
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Mon Aug 12 15:02:21 2024 +0300
+| 
+|     Fix isGameOver
+| 
+|  .idea/workspace.xml |   3 ++-
+|  MatamStory          | Bin 275848 -> 312544 bytes
+|  MatamStory.cpp      |   3 +--
+|  3 files changed, 3 insertions(+), 3 deletions(-)
+| 
+* commit 849d59b09e677e2329fffce00ac8e354fa55d517
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Mon Aug 12 14:54:57 2024 +0300
+| 
+|     remove todo statement
+| 
+|  .idea/workspace.xml | 71 ++++++++-------------------------------------------
+|  MatamStory.cpp      |  2 +-
+|  2 files changed, 12 insertions(+), 61 deletions(-)
+| 
+* commit d153d6c6e7047de64bf5e22bc83244ed1978b4da
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Mon Aug 12 14:53:07 2024 +0300
+| 
+|     Fix startgame bug
+| 
+|  .idea/workspace.xml                               | 132 +++++++++++++-------
+|  MatamStory.cpp                                    |  16 +--
+|  Players/Job.cpp                                   |  10 +-
+|  Players/Job.h                                     |  10 +-
+|  Players/Player.cpp                                |   6 +-
+|  Players/Player.h                                  |   5 +-
+|  ...7.json => index-2024-08-12T11-48-49-0418.json} |   0
+|  cmake-build-debug/.ninja_deps                     | Bin 33968 -> 0 bytes
+|  cmake-build-debug/.ninja_log                      |  29 -----
+|  .../3.27.8/CMakeDetermineCompilerABI_C.bin        | Bin 43069 -> 43069 bytes
+|  .../3.27.8/CMakeDetermineCompilerABI_CXX.bin      | Bin 43088 -> 43088 bytes
+|  .../CMakeFiles/3.27.8/CompilerIdC/a.exe           | Bin 43144 -> 43144 bytes
+|  .../CMakeFiles/3.27.8/CompilerIdCXX/a.exe         | Bin 43172 -> 43172 bytes
+|  .../CMakeFiles/CMakeConfigureLog.yaml             | 104 +++++++--------
+|  .../CMakeFiles/HW4.dir/Events/Balrog.cpp.obj      | Bin 70943 -> 0 bytes
+|  .../CMakeFiles/HW4.dir/Events/Monster.cpp.obj     | Bin 44498 -> 0 bytes
+|  .../CMakeFiles/HW4.dir/Events/Pack.cpp.obj        | Bin 229744 -> 0 bytes
+|  .../HW4.dir/Events/PotionsMerchant.cpp.obj        | Bin 50339 -> 0 bytes
+|  .../CMakeFiles/HW4.dir/Events/Slime.cpp.obj       | Bin 70061 -> 0 bytes
+|  .../CMakeFiles/HW4.dir/Events/Snail.cpp.obj       | Bin 70061 -> 0 bytes
+|  .../HW4.dir/Events/SolarEclipse.cpp.obj           | Bin 50073 -> 0 bytes
+|  .../CMakeFiles/HW4.dir/MatamStory.cpp.obj         | Bin 1229871 -> 0 bytes
+|  .../CMakeFiles/HW4.dir/Players/Character.cpp.obj  | Bin 52990 -> 0 bytes
+|  .../CMakeFiles/HW4.dir/Players/Job.cpp.obj        | Bin 61965 -> 0 bytes
+|  .../CMakeFiles/HW4.dir/Players/Player.cpp.obj     | Bin 83097 -> 0 bytes
+|  .../CMakeFiles/HW4.dir/Utilities.cpp.obj          | Bin 85978 -> 0 bytes
+|  cmake-build-debug/CMakeFiles/HW4.dir/main.cpp.obj | Bin 142199 -> 0 bytes
+|  cmake-build-debug/CMakeFiles/clion-Debug-log.txt  |   2 +-
+|  cmake-build-debug/HW4.exe                         | Bin 1634927 -> 0 bytes
+|  cmake-build-debug/Testing/Temporary/LastTest.log  |   4 +-
+|  30 files changed, 165 insertions(+), 153 deletions(-)
+| 
+* commit f6027bafac85c9f1a160bf4eb9e5aa179ce2b293
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Mon Aug 12 13:59:31 2024 +0300
+| 
+|     Add readPack function
+| 
+|  .idea/workspace.xml                              |  11 +++----
+|  Events/Pack.cpp                                  |   2 +-
+|  Events/Pack.h                                    |   2 +-
+|  MatamStory                                       | Bin 275600 -> 275848 bytes
+|  MatamStory.cpp                                   |  34 ++++++++++++++++++---
+|  MatamStory.h                                     |   2 +-
+|  Players/Player.cpp                               |   4 +--
+|  cmake-build-debug/Testing/Temporary/LastTest.log |   4 +--
+|  8 files changed, 42 insertions(+), 17 deletions(-)
+| 
+* commit 32460e2ead959cb81475930a17dd8be3230e535e
+| Author: roishm <roishmerling@campus.technion.ac.il>
+| Date:   Sun Aug 11 22:43:39 2024 +0300
+| 
+|     fixing bug in Event include
+| 
+|  Players/Player.h | 1 +
+|  1 file changed, 1 insertion(+)
+| 
+* commit 1e5ce20fbbbdfbecc526486156de043050df335d
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Sun Aug 11 13:25:29 2024 +0300
+| 
+|     Add bug fixes
+| 
+|  .idea/workspace.xml | 2 +-
+|  Utilities.cpp       | 6 +++---
+|  Utilities.h         | 6 ++----
+|  tests/test1.events  | 8 ++++----
+|  tests/test1.players | 4 ++--
+|  tests/test2.events  | 6 +++---
+|  tests/test2.players | 4 ++--
+|  tests/test3.events  | 8 ++++----
+|  tests/test3.players | 2 +-
+|  9 files changed, 22 insertions(+), 24 deletions(-)
+| 
+* commit 2e6dd44f4406390e96bc52bc3d94a9eef43ce023
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Thu Aug 8 18:27:09 2024 +0300
+| 
+|     Resume old events test
+| 
+|  tests/test1.events | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+| 
+* commit 32929b72232050f21dee6fbaf6ceabfdc4f2797e
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Thu Aug 8 18:25:48 2024 +0300
+| 
+|     Fix includes
+| 
+|  .idea/workspace.xml                              |  43 ++++++++++++---------
+|  Events/Event.h                                   |   2 +
+|  MatamStory                                       | Bin 275600 -> 275600 bytes
+|  MatamStory.h                                     |  15 ++++++-
+|  Players/Character.cpp                            |   1 -
+|  Players/Job.cpp                                  |   1 -
+|  Players/Player.cpp                               |   1 -
+|  Players/Player.h                                 |   1 +
+|  Utilities.h                                      |   6 ++-
+|  cmake-build-debug/Testing/Temporary/LastTest.log |   4 +-
+|  10 files changed, 48 insertions(+), 26 deletions(-)
+| 
+* commit 3e690e4a734c772203ecad129b3a317961adc7de
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Wed Aug 7 17:24:35 2024 +0300
+| 
+|     Fix some bugs
+|     
+|     read TODOs
+| 
+|  .idea/workspace.xml                              |  12 ++++++------
+|  MatamStory                                       | Bin 275488 -> 275600 bytes
+|  MatamStory.cpp                                   |  18 +++++-------------
+|  cmake-build-debug/Testing/Temporary/LastTest.log |   4 ++--
+|  tests/test1.events                               |   2 +-
+|  5 files changed, 14 insertions(+), 22 deletions(-)
+| 
+* commit 56e43673d28258a9d42565ff89793b4c85b61565
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Wed Aug 7 16:34:49 2024 +0300
+| 
+|     Fix balrog minor bug
+| 
+|  .idea/workspace.xml                               |   4 ++--
+|  Events/Balrog.cpp                                 |  10 ++++++++++
+|  Events/Balrog.h                                   |  12 ++++++++++--
+|  MatamStory                                        | Bin 260728 -> 275488 bytes
+|  MatamStory.cpp                                    |   1 +
+|  cmake-build-debug/.ninja_deps                     | Bin 27876 -> 33968 bytes
+|  cmake-build-debug/.ninja_log                      |  14 ++++++++++++++
+|  .../CMakeFiles/HW4.dir/Events/Balrog.cpp.obj      | Bin 70093 -> 70943 bytes
+|  .../CMakeFiles/HW4.dir/MatamStory.cpp.obj         | Bin 1105657 -> 1229871 bytes
+|  .../CMakeFiles/HW4.dir/Players/Player.cpp.obj     | Bin 83099 -> 83097 bytes
+|  cmake-build-debug/CMakeFiles/HW4.dir/main.cpp.obj | Bin 142321 -> 142199 bytes
+|  cmake-build-debug/HW4.exe                         | Bin 1555186 -> 1634927 bytes
+|  cmake-build-debug/Testing/Temporary/LastTest.log  |   4 ++--
+|  13 files changed, 39 insertions(+), 6 deletions(-)
+| 
+* commit 48ed3c6f22dc607ad589ed268cac7ceb8402a622
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Wed Aug 7 00:54:28 2024 +0300
+| 
+|     Add a function
+| 
+|  .idea/workspace.xml | 4 ++++
+|  MatamStory.cpp      | 9 +++++++--
+|  MatamStory.h        | 3 +++
+|  3 files changed, 14 insertions(+), 2 deletions(-)
+| 
+* commit 0079564483922c7a190d0a4c85a3e41c5f601320
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Wed Aug 7 00:35:49 2024 +0300
+| 
+|     Fix minor bug
+| 
+|  .idea/workspace.xml |  80 ++++++++++++--------------------------------------
+|  MatamStory          | Bin 0 -> 260728 bytes
+|  MatamStory.cpp      |   8 ++---
+|  MatamStory.h        |   2 +-
+|  4 files changed, 23 insertions(+), 67 deletions(-)
+| 
+* commit 4ae3fd5b15ff1310162d4d6bddd502e270425122
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Wed Aug 7 00:33:38 2024 +0300
+| 
+|     Fix minor bugs
+| 
+|  Events/Balrog.cpp  | 4 ++--
+|  Players/Player.cpp | 2 +-
+|  2 files changed, 3 insertions(+), 3 deletions(-)
+| 
+* commit 510e6e33bddeadf1358a5b4effa15183d42c69f6
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Wed Aug 7 00:19:16 2024 +0300
+| 
+|     Updating main
+| 
+|  .idea/workspace.xml                               | 109 +++++++++++---------
+|  ...8.json => index-2024-08-06T21-17-46-0327.json} |   0
+|  cmake-build-debug/.ninja_deps                     | Bin 36520 -> 27876 bytes
+|  cmake-build-debug/.ninja_log                      |  49 +++------
+|  .../3.27.8/CMakeDetermineCompilerABI_C.bin        | Bin 43069 -> 43069 bytes
+|  .../3.27.8/CMakeDetermineCompilerABI_CXX.bin      | Bin 43088 -> 43088 bytes
+|  .../CMakeFiles/3.27.8/CompilerIdC/a.exe           | Bin 43144 -> 43144 bytes
+|  .../CMakeFiles/3.27.8/CompilerIdCXX/a.exe         | Bin 43172 -> 43172 bytes
+|  .../CMakeFiles/CMakeConfigureLog.yaml             | 104 +++++++++----------
+|  cmake-build-debug/CMakeFiles/HW4.dir/main.cpp.obj | Bin 45326 -> 142321 bytes
+|  cmake-build-debug/CMakeFiles/clion-Debug-log.txt  |   2 +-
+|  cmake-build-debug/HW4.exe                         | Bin 1499243 -> 1555186 bytes
+|  cmake-build-debug/Testing/Temporary/LastTest.log  |   4 +-
+|  main.cpp                                          |  37 ++++++-
+|  14 files changed, 163 insertions(+), 142 deletions(-)
+| 
+* commit ede27f43f712c9fe8ee8086773728aecad5cc4dd
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Wed Aug 7 00:13:10 2024 +0300
+| 
+|     Finish play function
+| 
+|  .idea/workspace.xml                               |  91 +++++++++--------
+|  Events/Event.h                                    |   4 +-
+|  Events/Monster.cpp                                |   4 +-
+|  Events/Monster.h                                  |   2 +-
+|  Events/PotionsMerchant.cpp                        |   4 +-
+|  Events/PotionsMerchant.h                          |   2 +-
+|  Events/SolarEclipse.cpp                           |   4 +-
+|  Events/SolarEclipse.h                             |   2 +-
+|  MatamStory.cpp                                    | 100 +++++++++++++++----
+|  MatamStory.h                                      |  31 ++++++
+|  Players/Character.cpp                             |  10 +-
+|  Players/Character.h                               |   6 +-
+|  Players/Player.cpp                                |   2 +-
+|  Players/Player.h                                  |   2 +-
+|  ...5.json => index-2024-08-06T19-41-08-0418.json} |   0
+|  cmake-build-debug/.ninja_deps                     | Bin 11068 -> 36520 bytes
+|  cmake-build-debug/.ninja_log                      |  37 ++++++-
+|  .../3.27.8/CMakeDetermineCompilerABI_C.bin        | Bin 43069 -> 43069 bytes
+|  .../3.27.8/CMakeDetermineCompilerABI_CXX.bin      | Bin 43088 -> 43088 bytes
+|  .../CMakeFiles/3.27.8/CompilerIdC/a.exe           | Bin 43144 -> 43144 bytes
+|  .../CMakeFiles/3.27.8/CompilerIdCXX/a.exe         | Bin 43172 -> 43172 bytes
+|  .../CMakeFiles/CMakeConfigureLog.yaml             | 104 ++++++++++----------
+|  .../CMakeFiles/HW4.dir/Events/Balrog.cpp.obj      | Bin 0 -> 70093 bytes
+|  .../CMakeFiles/HW4.dir/Events/Monster.cpp.obj     | Bin 0 -> 44498 bytes
+|  .../CMakeFiles/HW4.dir/Events/Pack.cpp.obj        | Bin 0 -> 229744 bytes
+|  .../HW4.dir/Events/PotionsMerchant.cpp.obj        | Bin 0 -> 50339 bytes
+|  .../CMakeFiles/HW4.dir/Events/Slime.cpp.obj       | Bin 0 -> 70061 bytes
+|  .../CMakeFiles/HW4.dir/Events/Snail.cpp.obj       | Bin 0 -> 70061 bytes
+|  .../HW4.dir/Events/SolarEclipse.cpp.obj           | Bin 0 -> 50073 bytes
+|  .../CMakeFiles/HW4.dir/MatamStory.cpp.obj         | Bin 753 -> 1105657 bytes
+|  .../CMakeFiles/HW4.dir/Players/Character.cpp.obj  | Bin 52491 -> 52990 bytes
+|  .../CMakeFiles/HW4.dir/Players/Job.cpp.obj        | Bin 0 -> 61965 bytes
+|  .../CMakeFiles/HW4.dir/Players/Player.cpp.obj     | Bin 0 -> 83099 bytes
+|  .../CMakeFiles/HW4.dir/Utilities.cpp.obj          | Bin 0 -> 85978 bytes
+|  cmake-build-debug/CMakeFiles/HW4.dir/main.cpp.obj | Bin 0 -> 45326 bytes
+|  cmake-build-debug/CMakeFiles/clion-Debug-log.txt  |   2 +-
+|  cmake-build-debug/HW4.exe                         | Bin 0 -> 1499243 bytes
+|  cmake-build-debug/Testing/Temporary/LastTest.log  |   4 +-
+|  38 files changed, 273 insertions(+), 138 deletions(-)
+| 
+* commit a47e1c5a67661fe84495b2213390688823b8e198
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Tue Aug 6 22:14:32 2024 +0300
+| 
+|     Saving
+| 
+|  .idea/workspace.xml                               |  39 +-
+|  Events/.idea/workspace.xml                        |  43 +-
+|  Events/Balrog.cpp                                 |   4 +-
+|  Events/Balrog.h                                   |   2 +-
+|  Events/Event.h                                    |   4 +-
+|  Events/Monster.cpp                                |   2 +-
+|  Events/Monster.h                                  |   4 +-
+|  Events/PotionsMerchant.h                          |   2 +-
+|  Events/Slime.cpp                                  |   2 +-
+|  Events/Snail.cpp                                  |   2 +-
+|  Events/SolarEclipse.cpp                           |   2 +-
+|  Events/SolarEclipse.h                             |   2 +-
+|  MatamStory.cpp                                    |   7 +-
+|  Players/Job.cpp                                   |  13 +-
+|  Players/Job.h                                     |   2 +-
+|  Players/Player.cpp                                |   4 +-
+|  Players/Player.h                                  |   2 +-
+|  .../reply/cmakeFiles-v1-c8cd5a81c6fa4a40248c.json | 165 ----
+|  .../reply/cmakeFiles-v1-eccdc61b57c7b251d2c8.json | 793 ++++++++++++++++++++
+|  ...6.json => index-2024-08-06T15-33-46-0435.json} |   4 +-
+|  cmake-build-debug/.ninja_deps                     | Bin 0 -> 11068 bytes
+|  cmake-build-debug/.ninja_log                      |   3 +
+|  .../3.27.8/CMakeDetermineCompilerABI_C.bin        | Bin 43069 -> 43069 bytes
+|  .../3.27.8/CMakeDetermineCompilerABI_CXX.bin      | Bin 43088 -> 43088 bytes
+|  .../CMakeFiles/3.27.8/CompilerIdC/a.exe           | Bin 43144 -> 43144 bytes
+|  .../CMakeFiles/3.27.8/CompilerIdCXX/a.exe         | Bin 43172 -> 43172 bytes
+|  .../CMakeFiles/CMakeConfigureLog.yaml             | 104 +--
+|  .../CMakeFiles/HW4.dir/MatamStory.cpp.obj         | Bin 0 -> 753 bytes
+|  .../CMakeFiles/HW4.dir/Players/Character.cpp.obj  | Bin 0 -> 52491 bytes
+|  cmake-build-debug/CMakeFiles/clion-Debug-log.txt  |  14 +-
+|  cmake-build-debug/Testing/Temporary/LastTest.log  |   4 +-
+|  cmake-build-debug/build.ninja                     |  33 +-
+|  main.cpp                                          |  37 +-
+|  33 files changed, 973 insertions(+), 320 deletions(-)
+| 
+* commit e0be9ebdbef5391cea4300b9588a1b2a9580bdc7
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Tue Aug 6 17:28:19 2024 +0300
+| 
+|     Add most getdescription
+| 
+|  .idea/workspace.xml        | 53 ++++++++++++++++++++++++++------------------
+|  Events/Balrog.cpp          | 12 +++++++++-
+|  Events/Balrog.h            |  4 ++++
+|  Events/Event.h             |  5 ++---
+|  Events/Monster.cpp         |  4 ++--
+|  Events/Monster.h           |  8 ++++---
+|  Events/Pack.cpp            | 16 +++++++++++++
+|  Events/Pack.h              |  4 ++++
+|  Events/PotionsMerchant.cpp |  6 ++++-
+|  Events/PotionsMerchant.h   |  4 +++-
+|  Events/Slime.cpp           | 10 +++++++++
+|  Events/Slime.h             |  4 ++++
+|  Events/Snail.cpp           | 10 +++++++++
+|  Events/Snail.h             |  4 ++++
+|  Events/SolarEclipse.cpp    |  6 ++++-
+|  Events/SolarEclipse.h      |  4 +++-
+|  MatamStory.cpp             |  1 +
+|  Players/Job.cpp            |  6 ++++-
+|  Players/Job.h              |  2 +-
+|  Players/Player.cpp         |  5 ++++-
+|  Players/Player.h           |  3 ++-
+|  21 files changed, 132 insertions(+), 39 deletions(-)
+|   
+*   commit 4fd6d4104b0e5a65ee4095fafa0d1765cc3e16ed
+|\  Merge: 80cc7be b4db133
+| | Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| | Date:   Tue Aug 6 16:41:34 2024 +0300
+| | 
+| |     Merge branch 'main' into Events
+| | 
+| * commit b4db133065e0ceb5be58145cb3648a97fcf931ca
+| | Author: roishm <roishmerling@campus.technion.ac.il>
+| | Date:   Tue Aug 6 16:36:36 2024 +0300
+| | 
+| |     updating jobs functions
+| | 
+| |  Players/Job.cpp | 17 +++++++++++------
+| |  1 file changed, 11 insertions(+), 6 deletions(-)
+| | 
+* | commit 80cc7bea95f76c4328eb6f0797c94eb0d3feb3d1
+| | Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| | Date:   Tue Aug 6 16:40:58 2024 +0300
+| | 
+| |     Add constructor to MatamStory and play turn
+| | 
+| |  .idea/workspace.xml                              |  37 +-
+| |  Events/Event.h                                   |   1 +
+| |  MatamStory.cpp                                   |  97 ++-
+| |  MatamStory.h                                     |   4 +-
+| |  .../cmakeFiles-v1-c8cd5a81c6fa4a40248c.json      | 165 ++++
+| |  .../cmakeFiles-v1-eccdc61b57c7b251d2c8.json      | 793 -------------------
+| |  ....json => index-2024-08-05T14-49-43-0886.json} |   4 +-
+| |  cmake-build-debug/CMakeFiles/clion-Debug-log.txt |  14 +-
+| |  cmake-build-debug/Testing/Temporary/LastTest.log |   4 +-
+| |  cmake-build-debug/build.ninja                    |  33 +-
+| |  10 files changed, 262 insertions(+), 890 deletions(-)
+| | 
+* | commit 99814eacbfd477c015690c6a3c627386d4f4c44f
+| | Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| | Date:   Mon Aug 5 17:48:01 2024 +0300
+| | 
+| |     Create event cpp files
+| | 
+| |  .idea/workspace.xml                              |  77 +++++++++-----
+| |  CMakeLists.txt                                   |   5 +
+| |  Events/Balrog.cpp                                |   2 -
+| |  Events/Monster.cpp                               |   5 +-
+| |  Events/Pack.cpp                                  |  16 ++-
+| |  Events/Pack.h                                    |   6 +-
+| |  Events/PotionsMerchant.cpp                       |   7 +-
+| |  Events/Slime.cpp                                 |   2 -
+| |  Events/Snail.cpp                                 |   2 -
+| |  Events/SolarEclipse.cpp                          |   7 +-
+| |  MatamStory.cpp                                   |  35 ++++---
+| |  MatamStory.h                                     |   8 +-
+| |  ...on => codemodel-v2-6371daed85feb1962dcd.json} |   2 +-
+| |  ....json => index-2024-08-05T10-03-47-0495.json} |   4 +-
+| |  ...> target-HW4-Debug-bc8f7ba0e01361da1841.json} |  48 +++++++--
+| |  .../3.27.8/CMakeDetermineCompilerABI_C.bin       | Bin 43069 -> 43069 bytes
+| |  .../3.27.8/CMakeDetermineCompilerABI_CXX.bin     | Bin 43088 -> 43088 bytes
+| |  .../CMakeFiles/3.27.8/CompilerIdC/a.exe          | Bin 43144 -> 43144 bytes
+| |  .../CMakeFiles/3.27.8/CompilerIdCXX/a.exe        | Bin 43172 -> 43172 bytes
+| |  .../CMakeFiles/CMakeConfigureLog.yaml            | 104 +++++++++----------
+| |  cmake-build-debug/CMakeFiles/clion-Debug-log.txt |   2 +-
+| |  cmake-build-debug/Testing/Temporary/LastTest.log |   4 +-
+| |  cmake-build-debug/build.ninja                    |  29 +++++-
+| |  23 files changed, 229 insertions(+), 136 deletions(-)
+| | 
+* | commit 0f957a1864074cd50b1f767bc0fbfc9f69869a17
+|\| Merge: d70409c b516d4d
+| | Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| | Date:   Mon Aug 5 12:32:31 2024 +0300
+| | 
+| |     Merge branch 'main' into Events
+| | 
+| * commit b516d4d2fa292f1b6899bb32c53c5975977ec8c1
+| | Author: roishm <roishmerling@campus.technion.ac.il>
+| | Date:   Mon Aug 5 12:30:16 2024 +0300
+| | 
+| |     adding damage to encounter in player
+| | 
+| |  Players/Job.cpp    | 4 ++--
+| |  Players/Job.h      | 2 +-
+| |  Players/Player.cpp | 4 ++--
+| |  Players/Player.h   | 2 +-
+| |  4 files changed, 6 insertions(+), 6 deletions(-)
+| | 
+* | commit d70409ccc2122c7337aa95859af261547ee60d76
+| | Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| | Date:   Mon Aug 5 12:32:12 2024 +0300
+| | 
+| |     Add vectors to MatamStory
+| | 
+| |  .idea/workspace.xml | 71 +++++++++++++++++--------------------------------
+| |  Events/Monster.cpp  |  5 +++-
+| |  MatamStory.h        |  5 ++--
+| |  3 files changed, 32 insertions(+), 49 deletions(-)
+| | 
+* | commit f947aa00bc65d2356837e57bc6d93d01498a0a3b
+|\| Merge: 48bad3b ed7e5a5
+| | Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| | Date:   Mon Aug 5 12:03:59 2024 +0300
+| | 
+| |     Merge branch 'main' into Events
+| | 
+| * commit ed7e5a5df0a47db4baa62c1d74e98a075a8a9fc7
+| | Author: roishm <roishmerling@campus.technion.ac.il>
+| | Date:   Sun Aug 4 21:53:28 2024 +0300
+| | 
+| |     Adding jobs
+| | 
+| |  Players/Job.cpp  | 47 +++++++++++++++++++++++++++++++++++++++++++++++
+| |  Players/Job.h    | 38 ++++++++++++++++++++++++++++++++++++++
+| |  Players/Player.h |  2 +-
+| |  3 files changed, 86 insertions(+), 1 deletion(-)
+| | 
+| * commit 7729087f66cf6b915031a2d745dd665ca3e45299
+| | Author: roishm <roishmerling@campus.technion.ac.il>
+| | Date:   Sun Aug 4 17:31:53 2024 +0300
+| | 
+| |     fixing minor bugs in player and character
+| | 
+| |  Players/Character.h |  6 ++++--
+| |  Players/Player.cpp  | 24 ++++++++++++++++++++----
+| |  Players/Player.h    |  7 +++++--
+| |  3 files changed, 29 insertions(+), 8 deletions(-)
+| | 
+| * commit 276cc46769079b747cf54e95fea5d555c36d5ce6
+| | Author: roishm <roishmerling@campus.technion.ac.il>
+| | Date:   Sun Aug 4 10:13:52 2024 +0300
+| | 
+| |     Potions Merchant implementing
+| |     
+| |     adding isFullHP in Player and implementing the functions in Character
+| | 
+| |  Players/Character.cpp | 11 +++++++++++
+| |  Players/Character.h   |  7 ++++---
+| |  Players/Player.cpp    |  8 ++++++--
+| |  Players/Player.h      |  6 ++++++
+| |  4 files changed, 27 insertions(+), 5 deletions(-)
+| | 
+| * commit 414e6815ca5cb0a6ec39359dfdd531af9c46b9c1
+| | Author: roishm <roishmerling@campus.technion.ac.il>
+| | Date:   Sun Aug 4 10:03:45 2024 +0300
+| | 
+| |     creating Player.cpp and implementing the functions
+| | 
+| |  Players/Player.cpp | 58 ++++++++++++++++++++++++++++++++++++++++++++++++++
+| |  Players/Player.h   | 12 ++++++++---
+| |  2 files changed, 67 insertions(+), 3 deletions(-)
+| | 
+| * commit 525ba294e52a4323a9c766bce635048acb94031a
+| | Author: roishm <roishmerling@campus.technion.ac.il>
+| | Date:   Fri Aug 2 17:01:20 2024 +0300
+| | 
+| |     adding functions declarations
+| | 
+| |  Players/Player.h | 29 +++++++++++++++++++++++++++++
+| |  1 file changed, 29 insertions(+)
+| | 
+| * commit fda01254ce751ab9f77932bb2014844857f3af52
+| | Author: roishm <roishmerling@campus.technion.ac.il>
+| | Date:   Fri Aug 2 17:00:48 2024 +0300
+| | 
+| |     Creating Characters
+| | 
+| |  Players/Character.cpp | 11 +++++++++++
+| |  Players/Character.h   | 26 ++++++++++++++++++++++++++
+| |  2 files changed, 37 insertions(+)
+| | 
+* | commit 48bad3b7221d8acff92d2aa9a390165b60b5e8bd
+|/  Author: LiorFrenkel1 <liorfr5002@gmail.com>
+|   Date:   Mon Aug 5 12:03:18 2024 +0300
+|   
+|       Create .cpp files
+|   
+|    .idea/.gitignore                                 |   8 -
+|    .idea/workspace.xml                              | 121 +++
+|    CMakeLists.txt                                   |  24 +-
+|    Events/.idea/Events.iml                          |   8 +
+|    Events/.idea/modules.xml                         |   8 +
+|    Events/.idea/vcs.xml                             |   6 +
+|    Events/.idea/workspace.xml                       | 100 +++
+|    Events/Balrog.cpp                                |  20 +-
+|    Events/Balrog.h                                  |  15 +-
+|    Events/Monster.cpp                               |   6 +-
+|    Events/Monster.h                                 |   7 +-
+|    Events/Pack.cpp                                  |  36 +-
+|    Events/Pack.h                                    |  13 +-
+|    Events/Slime.cpp                                 |  20 +-
+|    Events/Slime.h                                   |  15 +-
+|    Events/Snail.cpp                                 |  20 +-
+|    Events/Snail.h                                   |  15 +-
+|    .../cmakeFiles-v1-c8cd5a81c6fa4a40248c.json      | 165 ----
+|    .../cmakeFiles-v1-eccdc61b57c7b251d2c8.json      | 793 +++++++++++++++++++
+|    ...on => codemodel-v2-d49dd5ed49c3db861bc3.json} |   2 +-
+|    ....json => index-2024-08-04T14-54-06-0208.json} |   8 +-
+|    ...> target-HW4-Debug-03221d557a41a57817f1.json} | 118 ++-
+|    .../3.27.8/CMakeDetermineCompilerABI_C.bin       | Bin 43069 -> 43069 bytes
+|    .../3.27.8/CMakeDetermineCompilerABI_CXX.bin     | Bin 43088 -> 43088 bytes
+|    .../CMakeFiles/3.27.8/CompilerIdC/a.exe          | Bin 43144 -> 43144 bytes
+|    .../CMakeFiles/3.27.8/CompilerIdCXX/a.exe        | Bin 43172 -> 43172 bytes
+|    .../CMakeFiles/CMakeConfigureLog.yaml            | 104 +--
+|    cmake-build-debug/CMakeFiles/clion-Debug-log.txt |  14 +-
+|    cmake-build-debug/Testing/Temporary/LastTest.log |   4 +-
+|    cmake-build-debug/build.ninja                    |  78 +-
+|    30 files changed, 1402 insertions(+), 326 deletions(-)
+| 
+* commit 822e6ed7984838fff5eea921baa8d8e6fb8cd8f8
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Thu Aug 1 11:48:28 2024 +0300
+| 
+|     Add all other events .h files and fix minor issues
+| 
+|  CMakeLists.txt                                           |  4 +++-
+|  Events/PotionsMerchant.cpp                               |  5 +++++
+|  Events/PotionsMerchant.h                                 | 13 +++++++++++++
+|  Events/SolarEclipse.cpp                                  |  5 +++++
+|  Events/SolarEclipse.h                                    | 13 +++++++++++++
+|  ...114e4.json => codemodel-v2-b5150c8cae55ccea97c5.json} |  2 +-
+|  ...-28-0726.json => index-2024-08-01T08-46-46-0602.json} |  4 ++--
+|  ...9.json => target-HW4-Debug-bb708a10751ba4998051.json} | 14 +++++++++++++-
+|  cmake-build-debug/Testing/Temporary/LastTest.log         |  4 ++--
+|  9 files changed, 57 insertions(+), 7 deletions(-)
+| 
+* commit 90e32896d91d78e030e9de9b223b04a2cc9a99d5
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Thu Aug 1 11:42:09 2024 +0300
+| 
+|     Fix some .h files
+| 
+|  Events/Event.h   | 8 ++++++--
+|  Events/Monster.h | 6 ++++++
+|  Events/Pack.h    | 9 ++++++++-
+|  3 files changed, 20 insertions(+), 3 deletions(-)
+| 
+* commit 582c62fc68249f5002810cf8133c3e20b8418a4f
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Thu Aug 1 11:33:06 2024 +0300
+| 
+|     Add all monsters .h files
+| 
+|  .idea/HW4.iml                                     |   8 +-
+|  CMakeLists.txt                                    |   8 +-
+|  Events/Balrog.cpp                                 |   5 +
+|  Events/Balrog.h                                   |  27 +
+|  Events/Event.h                                    |   9 +-
+|  Events/Monster.cpp                                |   5 +
+|  Events/Monster.h                                  |  21 +
+|  Events/Pack.cpp                                   |   5 +
+|  Events/Pack.h                                     |  28 +
+|  Events/Slime.cpp                                  |   5 +
+|  Events/Slime.h                                    |  26 +
+|  Events/Snail.cpp                                  |   5 +
+|  Events/Snail.h                                    |  26 +
+|  .../reply/cmakeFiles-v1-c8cd5a81c6fa4a40248c.json | 165 ++++
+|  .../reply/cmakeFiles-v1-eccdc61b57c7b251d2c8.json | 793 --------------------
+|  ...son => codemodel-v2-4c59cecb7040f8f114e4.json} |   2 +-
+|  ...6.json => index-2024-08-01T08-31-28-0726.json} |   8 +-
+|  ...=> target-HW4-Debug-954b6541989169d02529.json} |  32 +-
+|  cmake-build-debug/CMakeFiles/clion-Debug-log.txt  |  14 +-
+|  cmake-build-debug/Testing/Temporary/LastTest.log  |   4 +-
+|  cmake-build-debug/build.ninja                     |  13 +-
+|  21 files changed, 372 insertions(+), 837 deletions(-)
+| 
+* commit a3fb67346e8dd30443def99fd235a45aab86b81b
+| Author: LiorFrenkel1 <liorfr5002@gmail.com>
+| Date:   Thu Aug 1 10:28:41 2024 +0300
+| 
+|     Create cMakesList
+| 
+|  .idea/.gitignore                                  |    8 +
+|  .idea/HW4.iml                                     |    8 +
+|  .idea/misc.xml                                    |    4 +
+|  .idea/modules.xml                                 |    8 +
+|  .idea/vcs.xml                                     |    6 +
+|  CMakeLists.txt                                    |   17 +
+|  cmake-build-debug/.cmake/api/v1/query/cache-v2    |    0
+|  .../.cmake/api/v1/query/cmakeFiles-v1             |    0
+|  .../.cmake/api/v1/query/codemodel-v2              |    0
+|  .../.cmake/api/v1/query/toolchains-v1             |    0
+|  .../v1/reply/cache-v2-854e884c9872fd3d5c8f.json   | 1327 +++++++++++++++++++
+|  .../reply/cmakeFiles-v1-eccdc61b57c7b251d2c8.json |  793 +++++++++++
+|  .../reply/codemodel-v2-7804d76316b10eb83715.json  |   60 +
+|  .../directory-.-Debug-d0094a50bb2071803777.json   |   14 +
+|  .../v1/reply/index-2024-08-01T07-27-51-0146.json  |  108 ++
+|  .../target-HW4-Debug-10f454c0ce32388a7936.json    |  186 +++
+|  .../reply/toolchains-v1-471bce94bfe13a5ea4fc.json |   93 ++
+|  cmake-build-debug/CMakeCache.txt                  |  415 ++++++
+|  .../CMakeFiles/3.27.8/CMakeCCompiler.cmake        |   74 ++
+|  .../CMakeFiles/3.27.8/CMakeCXXCompiler.cmake      |   85 ++
+|  .../3.27.8/CMakeDetermineCompilerABI_C.bin        |  Bin 0 -> 43069 bytes
+|  .../3.27.8/CMakeDetermineCompilerABI_CXX.bin      |  Bin 0 -> 43088 bytes
+|  .../CMakeFiles/3.27.8/CMakeRCCompiler.cmake       |    6 +
+|  .../CMakeFiles/3.27.8/CMakeSystem.cmake           |   15 +
+|  .../3.27.8/CompilerIdC/CMakeCCompilerId.c         |  866 ++++++++++++
+|  .../CMakeFiles/3.27.8/CompilerIdC/a.exe           |  Bin 0 -> 43144 bytes
+|  .../3.27.8/CompilerIdCXX/CMakeCXXCompilerId.cpp   |  855 ++++++++++++
+|  .../CMakeFiles/3.27.8/CompilerIdCXX/a.exe         |  Bin 0 -> 43172 bytes
+|  .../CMakeFiles/CMakeConfigureLog.yaml             |  417 ++++++
+|  .../CMakeFiles/TargetDirectories.txt              |    3 +
+|  cmake-build-debug/CMakeFiles/clion-Debug-log.txt  |   16 +
+|  .../CMakeFiles/clion-environment.txt              |    4 +
+|  cmake-build-debug/CMakeFiles/cmake.check_cache    |    1 +
+|  cmake-build-debug/CMakeFiles/rules.ninja          |   64 +
+|  cmake-build-debug/Testing/Temporary/LastTest.log  |    3 +
+|  cmake-build-debug/build.ninja                     |  168 +++
+|  cmake-build-debug/cmake_install.cmake             |   49 +
+|  37 files changed, 5673 insertions(+)
+|   
+| * commit ba0b3459f0f82d3907c4e294da2bff54ad0ad1c3
+| | Author: Adi Harif <adi.harif@campus.technion.ac.il>
+| | Date:   Sun Aug 4 19:43:54 2024 +0300
+| | 
+| |     [bugfix] Changes utilities function to iterate over size_t variable instead of unsigned int
+| | 
+| |  Utilities.cpp | 6 +++---
+| |  1 file changed, 3 insertions(+), 3 deletions(-)
+| | 
+| * commit ecc9258c6f2aa2c9c091a7738587e206586a1c14
+|/  Author: Adi Harif <adi.harif@campus.technion.ac.il>
+|   Date:   Sun Aug 4 08:16:59 2024 +0300
+|   
+|       [format] Changes tests eol format to LF instead of CRLF
+|   
+|    tests/test1.events  | 8 ++++----
+|    tests/test1.players | 4 ++--
+|    tests/test2.events  | 6 +++---
+|    tests/test2.players | 4 ++--
+|    tests/test3.events  | 8 ++++----
+|    tests/test3.players | 2 +-
+|    6 files changed, 16 insertions(+), 16 deletions(-)
+| 
+* commit 6d0b58bcecef6fc2291c09f654a978cc382c3e31
+| Author: AdiHarif <adi.harif@campus.technion.ac.il>
+| Date:   Mon Jul 29 21:47:45 2024 +0300
+| 
+|     Adds supplied files
+| 
+|  Events/Event.h       |  14 +++++
+|  MatamStory.cpp       |  74 +++++++++++++++++++++++++
+|  MatamStory.h         |  55 +++++++++++++++++++
+|  Players/Player.h     |  51 +++++++++++++++++
+|  Utilities.cpp        | 117 +++++++++++++++++++++++++++++++++++++++
+|  Utilities.h          | 146 +++++++++++++++++++++++++++++++++++++++++++++++++
+|  main.cpp             |  40 ++++++++++++++
+|  tests/test1.events   |   5 ++
+|  tests/test1.expected |  96 ++++++++++++++++++++++++++++++++
+|  tests/test1.players  |   3 +
+|  tests/test2.events   |   4 ++
+|  tests/test2.expected |   1 +
+|  tests/test2.players  |   3 +
+|  tests/test3.events   |   5 ++
+|  tests/test3.expected |   1 +
+|  tests/test3.players  |   2 +
+|  16 files changed, 617 insertions(+)
+| 
+* commit beadb33ed4c7dd2da9d4078b9de6253232c67a46
+  Author: AdiHarif <adi.harif@campus.technion.ac.il>
+  Date:   Mon Jul 29 21:46:59 2024 +0300
+  
+      Initial Commit - Adds README.md file
+  
+   README.md | 7 +++++++
+   1 file changed, 7 insertions(+)
