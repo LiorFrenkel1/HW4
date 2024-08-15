@@ -43,6 +43,12 @@ MatamStory::MatamStory(std::istream& eventsStream, std::istream& playersStream) 
         } else {
             throw std::runtime_error("Invalid Players File");
         }
+        playerName = "";
+        playerJob = "";
+        playerCharacter = "";
+    }
+    if (playerName != "" || playerJob != "" || playerCharacter != "") {
+        throw std::runtime_error("Invalid Players File");
     }
     if (this->players.size() < 2 || this->players.size() > 6) {
         throw std::runtime_error("Invalid Players File");
